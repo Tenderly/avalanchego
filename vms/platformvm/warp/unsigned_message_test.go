@@ -8,9 +8,9 @@ import (
 
 	"github.com/stretchr/testify/require"
 
-	"github.com/ava-labs/avalanchego/codec"
-	"github.com/ava-labs/avalanchego/ids"
-	"github.com/ava-labs/avalanchego/utils/constants"
+	"github.com/tenderly/avalanchego/codec"
+	"github.com/tenderly/avalanchego/ids"
+	"github.com/tenderly/avalanchego/utils/constants"
 )
 
 func TestUnsignedMessage(t *testing.T) {

@@ -8,16 +8,16 @@ import (
 
 	"github.com/prometheus/client_golang/prometheus"
 
-	"github.com/ava-labs/avalanchego/cache"
-	"github.com/ava-labs/avalanchego/cache/metercacher"
-	"github.com/ava-labs/avalanchego/database"
-	"github.com/ava-labs/avalanchego/ids"
-	"github.com/ava-labs/avalanchego/snow/choices"
-	"github.com/ava-labs/avalanchego/utils/constants"
-	"github.com/ava-labs/avalanchego/utils/metric"
-	"github.com/ava-labs/avalanchego/utils/units"
-	"github.com/ava-labs/avalanchego/utils/wrappers"
-	"github.com/ava-labs/avalanchego/vms/proposervm/block"
+	"github.com/tenderly/avalanchego/cache"
+	"github.com/tenderly/avalanchego/cache/metercacher"
+	"github.com/tenderly/avalanchego/database"
+	"github.com/tenderly/avalanchego/ids"
+	"github.com/tenderly/avalanchego/snow/choices"
+	"github.com/tenderly/avalanchego/utils/constants"
+	"github.com/tenderly/avalanchego/utils/metric"
+	"github.com/tenderly/avalanchego/utils/units"
+	"github.com/tenderly/avalanchego/utils/wrappers"
+	"github.com/tenderly/avalanchego/vms/proposervm/block"
 )
 
 const blockCacheSize = 64 * units.MiB

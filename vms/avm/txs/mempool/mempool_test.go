@@ -9,11 +9,11 @@ import (
 	"github.com/prometheus/client_golang/prometheus"
 	"github.com/stretchr/testify/require"
 
-	"github.com/ava-labs/avalanchego/ids"
-	"github.com/ava-labs/avalanchego/snow/engine/common"
-	"github.com/ava-labs/avalanchego/utils"
-	"github.com/ava-labs/avalanchego/vms/avm/txs"
-	"github.com/ava-labs/avalanchego/vms/components/avax"
+	"github.com/tenderly/avalanchego/ids"
+	"github.com/tenderly/avalanchego/snow/engine/common"
+	"github.com/tenderly/avalanchego/utils"
+	"github.com/tenderly/avalanchego/vms/avm/txs"
+	"github.com/tenderly/avalanchego/vms/components/avax"
 )
 
 func newMempool(toEngine chan<- common.Message) (Mempool, error) {

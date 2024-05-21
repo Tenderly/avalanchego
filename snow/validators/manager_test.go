@@ -9,11 +9,11 @@ import (
 
 	"github.com/stretchr/testify/require"
 
-	"github.com/ava-labs/avalanchego/ids"
-	"github.com/ava-labs/avalanchego/utils/crypto/bls"
-	"github.com/ava-labs/avalanchego/utils/set"
+	"github.com/tenderly/avalanchego/ids"
+	"github.com/tenderly/avalanchego/utils/crypto/bls"
+	"github.com/tenderly/avalanchego/utils/set"
 
-	safemath "github.com/ava-labs/avalanchego/utils/math"
+	safemath "github.com/tenderly/avalanchego/utils/math"
 )
 
 var _ ManagerCallbackListener = (*managerCallbackListener)(nil)

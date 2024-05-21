@@ -13,10 +13,10 @@ import (
 	"github.com/stretchr/testify/require"
 	"google.golang.org/protobuf/proto"
 
-	"github.com/ava-labs/avalanchego/ids"
-	"github.com/ava-labs/avalanchego/proto/pb/p2p"
-	"github.com/ava-labs/avalanchego/utils/compression"
-	"github.com/ava-labs/avalanchego/utils/logging"
+	"github.com/tenderly/avalanchego/ids"
+	"github.com/tenderly/avalanchego/proto/pb/p2p"
+	"github.com/tenderly/avalanchego/utils/compression"
+	"github.com/tenderly/avalanchego/utils/logging"
 )
 
 var (

@@ -9,17 +9,17 @@ import (
 
 	"github.com/stretchr/testify/require"
 
-	"github.com/ava-labs/avalanchego/genesis"
-	"github.com/ava-labs/avalanchego/ids"
-	"github.com/ava-labs/avalanchego/snow/validators"
-	"github.com/ava-labs/avalanchego/tests"
-	"github.com/ava-labs/avalanchego/tests/fixture/e2e"
-	"github.com/ava-labs/avalanchego/tests/fixture/tmpnet"
-	"github.com/ava-labs/avalanchego/utils/constants"
-	"github.com/ava-labs/avalanchego/utils/crypto/secp256k1"
-	"github.com/ava-labs/avalanchego/vms/platformvm"
-	"github.com/ava-labs/avalanchego/vms/platformvm/txs"
-	"github.com/ava-labs/avalanchego/vms/secp256k1fx"
+	"github.com/tenderly/avalanchego/genesis"
+	"github.com/tenderly/avalanchego/ids"
+	"github.com/tenderly/avalanchego/snow/validators"
+	"github.com/tenderly/avalanchego/tests"
+	"github.com/tenderly/avalanchego/tests/fixture/e2e"
+	"github.com/tenderly/avalanchego/tests/fixture/tmpnet"
+	"github.com/tenderly/avalanchego/utils/constants"
+	"github.com/tenderly/avalanchego/utils/crypto/secp256k1"
+	"github.com/tenderly/avalanchego/vms/platformvm"
+	"github.com/tenderly/avalanchego/vms/platformvm/txs"
+	"github.com/tenderly/avalanchego/vms/secp256k1fx"
 
 	ginkgo "github.com/onsi/ginkgo/v2"
 )

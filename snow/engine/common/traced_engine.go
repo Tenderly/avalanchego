@@ -9,11 +9,11 @@ import (
 
 	"go.opentelemetry.io/otel/attribute"
 
-	"github.com/ava-labs/avalanchego/ids"
-	"github.com/ava-labs/avalanchego/snow"
-	"github.com/ava-labs/avalanchego/trace"
-	"github.com/ava-labs/avalanchego/utils/set"
-	"github.com/ava-labs/avalanchego/version"
+	"github.com/tenderly/avalanchego/ids"
+	"github.com/tenderly/avalanchego/snow"
+	"github.com/tenderly/avalanchego/trace"
+	"github.com/tenderly/avalanchego/utils/set"
+	"github.com/tenderly/avalanchego/version"
 
 	oteltrace "go.opentelemetry.io/otel/trace"
 )

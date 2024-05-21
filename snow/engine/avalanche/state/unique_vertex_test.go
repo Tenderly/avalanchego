@@ -11,13 +11,13 @@ import (
 
 	"github.com/stretchr/testify/require"
 
-	"github.com/ava-labs/avalanchego/database/memdb"
-	"github.com/ava-labs/avalanchego/ids"
-	"github.com/ava-labs/avalanchego/snow/choices"
-	"github.com/ava-labs/avalanchego/snow/consensus/snowstorm"
-	"github.com/ava-labs/avalanchego/snow/engine/avalanche/vertex"
-	"github.com/ava-labs/avalanchego/utils/hashing"
-	"github.com/ava-labs/avalanchego/utils/logging"
+	"github.com/tenderly/avalanchego/database/memdb"
+	"github.com/tenderly/avalanchego/ids"
+	"github.com/tenderly/avalanchego/snow/choices"
+	"github.com/tenderly/avalanchego/snow/consensus/snowstorm"
+	"github.com/tenderly/avalanchego/snow/engine/avalanche/vertex"
+	"github.com/tenderly/avalanchego/utils/hashing"
+	"github.com/tenderly/avalanchego/utils/logging"
 )
 
 var errUnknownTx = errors.New("unknown tx")

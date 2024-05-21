@@ -12,8 +12,8 @@ import (
 	"math/bits"
 	"slices"
 
-	"github.com/ava-labs/avalanchego/ids"
-	"github.com/ava-labs/avalanchego/utils/maybe"
+	"github.com/tenderly/avalanchego/ids"
+	"github.com/tenderly/avalanchego/utils/maybe"
 )
 
 const (

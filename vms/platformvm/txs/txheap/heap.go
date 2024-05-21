@@ -4,9 +4,9 @@
 package txheap
 
 import (
-	"github.com/ava-labs/avalanchego/ids"
-	"github.com/ava-labs/avalanchego/utils/heap"
-	"github.com/ava-labs/avalanchego/vms/platformvm/txs"
+	"github.com/tenderly/avalanchego/ids"
+	"github.com/tenderly/avalanchego/utils/heap"
+	"github.com/tenderly/avalanchego/vms/platformvm/txs"
 )
 
 type Heap interface {

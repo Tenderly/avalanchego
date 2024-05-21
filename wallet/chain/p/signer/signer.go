@@ -4,11 +4,11 @@
 package signer
 
 import (
-	"github.com/ava-labs/avalanchego/ids"
-	"github.com/ava-labs/avalanchego/utils/crypto/keychain"
-	"github.com/ava-labs/avalanchego/vms/components/avax"
-	"github.com/ava-labs/avalanchego/vms/platformvm/fx"
-	"github.com/ava-labs/avalanchego/vms/platformvm/txs"
+	"github.com/tenderly/avalanchego/ids"
+	"github.com/tenderly/avalanchego/utils/crypto/keychain"
+	"github.com/tenderly/avalanchego/vms/components/avax"
+	"github.com/tenderly/avalanchego/vms/platformvm/fx"
+	"github.com/tenderly/avalanchego/vms/platformvm/txs"
 
 	stdcontext "context"
 )

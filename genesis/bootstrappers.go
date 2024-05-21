@@ -9,10 +9,10 @@ import (
 
 	_ "embed"
 
-	"github.com/ava-labs/avalanchego/ids"
-	"github.com/ava-labs/avalanchego/utils/constants"
-	"github.com/ava-labs/avalanchego/utils/ips"
-	"github.com/ava-labs/avalanchego/utils/sampler"
+	"github.com/tenderly/avalanchego/ids"
+	"github.com/tenderly/avalanchego/utils/constants"
+	"github.com/tenderly/avalanchego/utils/ips"
+	"github.com/tenderly/avalanchego/utils/sampler"
 )
 
 var (

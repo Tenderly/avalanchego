@@ -6,10 +6,10 @@ package state
 import (
 	"errors"
 
-	"github.com/ava-labs/avalanchego/database"
-	"github.com/ava-labs/avalanchego/ids"
-	"github.com/ava-labs/avalanchego/utils/math"
-	"github.com/ava-labs/avalanchego/vms/platformvm/warp"
+	"github.com/tenderly/avalanchego/database"
+	"github.com/tenderly/avalanchego/ids"
+	"github.com/tenderly/avalanchego/utils/math"
+	"github.com/tenderly/avalanchego/vms/platformvm/warp"
 )
 
 var (

@@ -7,17 +7,17 @@ import (
 	"math/big"
 	"strings"
 
-	"github.com/ava-labs/coreth/core/types"
-	"github.com/ava-labs/coreth/params"
-	"github.com/ava-labs/coreth/plugin/evm"
 	"github.com/ethereum/go-ethereum/accounts/abi"
 	"github.com/ethereum/go-ethereum/common"
 	"github.com/stretchr/testify/require"
+	"github.com/tenderly/coreth/core/types"
+	"github.com/tenderly/coreth/params"
+	"github.com/tenderly/coreth/plugin/evm"
 
-	"github.com/ava-labs/avalanchego/tests"
-	"github.com/ava-labs/avalanchego/tests/fixture/e2e"
-	"github.com/ava-labs/avalanchego/tests/fixture/tmpnet"
-	"github.com/ava-labs/avalanchego/utils/crypto/secp256k1"
+	"github.com/tenderly/avalanchego/tests"
+	"github.com/tenderly/avalanchego/tests/fixture/e2e"
+	"github.com/tenderly/avalanchego/tests/fixture/tmpnet"
+	"github.com/tenderly/avalanchego/utils/crypto/secp256k1"
 
 	ginkgo "github.com/onsi/ginkgo/v2"
 )

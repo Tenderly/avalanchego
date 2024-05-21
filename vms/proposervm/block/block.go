@@ -8,10 +8,10 @@ import (
 	"fmt"
 	"time"
 
-	"github.com/ava-labs/avalanchego/ids"
-	"github.com/ava-labs/avalanchego/staking"
-	"github.com/ava-labs/avalanchego/utils/hashing"
-	"github.com/ava-labs/avalanchego/utils/wrappers"
+	"github.com/tenderly/avalanchego/ids"
+	"github.com/tenderly/avalanchego/staking"
+	"github.com/tenderly/avalanchego/utils/hashing"
+	"github.com/tenderly/avalanchego/utils/wrappers"
 )
 
 var (

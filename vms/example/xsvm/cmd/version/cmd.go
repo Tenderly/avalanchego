@@ -8,8 +8,8 @@ import (
 
 	"github.com/spf13/cobra"
 
-	"github.com/ava-labs/avalanchego/version"
-	"github.com/ava-labs/avalanchego/vms/example/xsvm"
+	"github.com/tenderly/avalanchego/version"
+	"github.com/tenderly/avalanchego/vms/example/xsvm"
 )
 
 const format = `%s:

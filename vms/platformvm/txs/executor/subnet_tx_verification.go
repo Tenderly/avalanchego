@@ -7,11 +7,11 @@ import (
 	"errors"
 	"fmt"
 
-	"github.com/ava-labs/avalanchego/database"
-	"github.com/ava-labs/avalanchego/ids"
-	"github.com/ava-labs/avalanchego/vms/components/verify"
-	"github.com/ava-labs/avalanchego/vms/platformvm/state"
-	"github.com/ava-labs/avalanchego/vms/platformvm/txs"
+	"github.com/tenderly/avalanchego/database"
+	"github.com/tenderly/avalanchego/ids"
+	"github.com/tenderly/avalanchego/vms/components/verify"
+	"github.com/tenderly/avalanchego/vms/platformvm/state"
+	"github.com/tenderly/avalanchego/vms/platformvm/txs"
 )
 
 var (

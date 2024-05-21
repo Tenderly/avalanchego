@@ -7,12 +7,12 @@ import (
 	"context"
 	"errors"
 
-	"github.com/ava-labs/avalanchego/database"
-	"github.com/ava-labs/avalanchego/snow"
-	"github.com/ava-labs/avalanchego/vms/example/xsvm/state"
+	"github.com/tenderly/avalanchego/database"
+	"github.com/tenderly/avalanchego/snow"
+	"github.com/tenderly/avalanchego/vms/example/xsvm/state"
 
-	smblock "github.com/ava-labs/avalanchego/snow/engine/snowman/block"
-	xsblock "github.com/ava-labs/avalanchego/vms/example/xsvm/block"
+	smblock "github.com/tenderly/avalanchego/snow/engine/snowman/block"
+	xsblock "github.com/tenderly/avalanchego/vms/example/xsvm/block"
 )
 
 var errNoTxs = errors.New("no transactions")

@@ -6,20 +6,20 @@ package primary
 import (
 	"context"
 
-	"github.com/ava-labs/avalanchego/ids"
-	"github.com/ava-labs/avalanchego/utils/constants"
-	"github.com/ava-labs/avalanchego/utils/crypto/keychain"
-	"github.com/ava-labs/avalanchego/utils/set"
-	"github.com/ava-labs/avalanchego/vms/platformvm/txs"
-	"github.com/ava-labs/avalanchego/wallet/chain/c"
-	"github.com/ava-labs/avalanchego/wallet/chain/p"
-	"github.com/ava-labs/avalanchego/wallet/chain/x"
-	"github.com/ava-labs/avalanchego/wallet/subnet/primary/common"
+	"github.com/tenderly/avalanchego/ids"
+	"github.com/tenderly/avalanchego/utils/constants"
+	"github.com/tenderly/avalanchego/utils/crypto/keychain"
+	"github.com/tenderly/avalanchego/utils/set"
+	"github.com/tenderly/avalanchego/vms/platformvm/txs"
+	"github.com/tenderly/avalanchego/wallet/chain/c"
+	"github.com/tenderly/avalanchego/wallet/chain/p"
+	"github.com/tenderly/avalanchego/wallet/chain/x"
+	"github.com/tenderly/avalanchego/wallet/subnet/primary/common"
 
-	pbuilder "github.com/ava-labs/avalanchego/wallet/chain/p/builder"
-	psigner "github.com/ava-labs/avalanchego/wallet/chain/p/signer"
-	xbuilder "github.com/ava-labs/avalanchego/wallet/chain/x/builder"
-	xsigner "github.com/ava-labs/avalanchego/wallet/chain/x/signer"
+	pbuilder "github.com/tenderly/avalanchego/wallet/chain/p/builder"
+	psigner "github.com/tenderly/avalanchego/wallet/chain/p/signer"
+	xbuilder "github.com/tenderly/avalanchego/wallet/chain/x/builder"
+	xsigner "github.com/tenderly/avalanchego/wallet/chain/x/signer"
 )
 
 var _ Wallet = (*wallet)(nil)

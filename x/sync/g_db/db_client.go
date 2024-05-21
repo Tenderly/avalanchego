@@ -9,12 +9,12 @@ import (
 
 	"google.golang.org/protobuf/types/known/emptypb"
 
-	"github.com/ava-labs/avalanchego/ids"
-	"github.com/ava-labs/avalanchego/utils/maybe"
-	"github.com/ava-labs/avalanchego/x/merkledb"
-	"github.com/ava-labs/avalanchego/x/sync"
+	"github.com/tenderly/avalanchego/ids"
+	"github.com/tenderly/avalanchego/utils/maybe"
+	"github.com/tenderly/avalanchego/x/merkledb"
+	"github.com/tenderly/avalanchego/x/sync"
 
-	pb "github.com/ava-labs/avalanchego/proto/pb/sync"
+	pb "github.com/tenderly/avalanchego/proto/pb/sync"
 )
 
 var _ sync.DB = (*DBClient)(nil)

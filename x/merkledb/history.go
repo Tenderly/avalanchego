@@ -8,11 +8,11 @@ import (
 	"errors"
 	"fmt"
 
-	"github.com/ava-labs/avalanchego/ids"
-	"github.com/ava-labs/avalanchego/utils"
-	"github.com/ava-labs/avalanchego/utils/buffer"
-	"github.com/ava-labs/avalanchego/utils/maybe"
-	"github.com/ava-labs/avalanchego/utils/set"
+	"github.com/tenderly/avalanchego/ids"
+	"github.com/tenderly/avalanchego/utils"
+	"github.com/tenderly/avalanchego/utils/buffer"
+	"github.com/tenderly/avalanchego/utils/maybe"
+	"github.com/tenderly/avalanchego/utils/set"
 )
 
 var (

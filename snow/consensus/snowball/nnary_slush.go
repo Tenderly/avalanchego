@@ -6,7 +6,7 @@ package snowball
 import (
 	"fmt"
 
-	"github.com/ava-labs/avalanchego/ids"
+	"github.com/tenderly/avalanchego/ids"
 )
 
 func newNnarySlush(choice ids.ID) nnarySlush {

@@ -3,7 +3,7 @@
 
 package constants
 
-import "github.com/ava-labs/avalanchego/utils/set"
+import "github.com/tenderly/avalanchego/utils/set"
 
 var (
 	// CurrentACPs is the set of ACPs that are currently, at the time of

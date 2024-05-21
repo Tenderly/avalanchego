@@ -9,7 +9,7 @@ import (
 
 	"github.com/stretchr/testify/require"
 
-	"github.com/ava-labs/avalanchego/vms/platformvm/network"
+	"github.com/tenderly/avalanchego/vms/platformvm/network"
 )
 
 func TestExecutionConfigUnmarshal(t *testing.T) {

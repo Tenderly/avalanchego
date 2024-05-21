@@ -13,10 +13,10 @@ import (
 
 	_ "embed"
 
-	"github.com/ava-labs/avalanchego/ids"
-	"github.com/ava-labs/avalanchego/network/peer"
-	"github.com/ava-labs/avalanchego/staking"
-	"github.com/ava-labs/avalanchego/utils/ips"
+	"github.com/tenderly/avalanchego/ids"
+	"github.com/tenderly/avalanchego/network/peer"
+	"github.com/tenderly/avalanchego/staking"
+	"github.com/tenderly/avalanchego/utils/ips"
 )
 
 var (

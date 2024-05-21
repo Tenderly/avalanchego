@@ -11,14 +11,14 @@ import (
 
 	"go.uber.org/zap"
 
-	"github.com/ava-labs/avalanchego/ids"
-	"github.com/ava-labs/avalanchego/snow"
-	"github.com/ava-labs/avalanchego/snow/validators"
-	"github.com/ava-labs/avalanchego/utils/heap"
-	"github.com/ava-labs/avalanchego/utils/set"
-	"github.com/ava-labs/avalanchego/utils/timer/mockable"
+	"github.com/tenderly/avalanchego/ids"
+	"github.com/tenderly/avalanchego/snow"
+	"github.com/tenderly/avalanchego/snow/validators"
+	"github.com/tenderly/avalanchego/utils/heap"
+	"github.com/tenderly/avalanchego/utils/set"
+	"github.com/tenderly/avalanchego/utils/timer/mockable"
 
-	safemath "github.com/ava-labs/avalanchego/utils/math"
+	safemath "github.com/tenderly/avalanchego/utils/math"
 )
 
 // If a peer consistently does not respond to queries, it will

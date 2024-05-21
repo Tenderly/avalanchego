@@ -10,13 +10,13 @@ import (
 
 	"go.uber.org/zap"
 
-	"github.com/ava-labs/avalanchego/database"
-	"github.com/ava-labs/avalanchego/ids"
-	"github.com/ava-labs/avalanchego/snow/choices"
-	"github.com/ava-labs/avalanchego/snow/consensus/snowstorm"
-	"github.com/ava-labs/avalanchego/utils/set"
-	"github.com/ava-labs/avalanchego/vms/avm/txs"
-	"github.com/ava-labs/avalanchego/vms/avm/txs/executor"
+	"github.com/tenderly/avalanchego/database"
+	"github.com/tenderly/avalanchego/ids"
+	"github.com/tenderly/avalanchego/snow/choices"
+	"github.com/tenderly/avalanchego/snow/consensus/snowstorm"
+	"github.com/tenderly/avalanchego/utils/set"
+	"github.com/tenderly/avalanchego/vms/avm/txs"
+	"github.com/tenderly/avalanchego/vms/avm/txs/executor"
 )
 
 var (

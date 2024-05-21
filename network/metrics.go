@@ -9,11 +9,11 @@ import (
 
 	"github.com/prometheus/client_golang/prometheus"
 
-	"github.com/ava-labs/avalanchego/ids"
-	"github.com/ava-labs/avalanchego/network/peer"
-	"github.com/ava-labs/avalanchego/utils"
-	"github.com/ava-labs/avalanchego/utils/constants"
-	"github.com/ava-labs/avalanchego/utils/set"
+	"github.com/tenderly/avalanchego/ids"
+	"github.com/tenderly/avalanchego/network/peer"
+	"github.com/tenderly/avalanchego/utils"
+	"github.com/tenderly/avalanchego/utils/constants"
+	"github.com/tenderly/avalanchego/utils/set"
 )
 
 type metrics struct {

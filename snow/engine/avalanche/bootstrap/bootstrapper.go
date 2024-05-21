@@ -10,17 +10,17 @@ import (
 
 	"go.uber.org/zap"
 
-	"github.com/ava-labs/avalanchego/cache"
-	"github.com/ava-labs/avalanchego/ids"
-	"github.com/ava-labs/avalanchego/proto/pb/p2p"
-	"github.com/ava-labs/avalanchego/snow"
-	"github.com/ava-labs/avalanchego/snow/choices"
-	"github.com/ava-labs/avalanchego/snow/consensus/avalanche"
-	"github.com/ava-labs/avalanchego/snow/engine/common"
-	"github.com/ava-labs/avalanchego/utils/bimap"
-	"github.com/ava-labs/avalanchego/utils/heap"
-	"github.com/ava-labs/avalanchego/utils/set"
-	"github.com/ava-labs/avalanchego/version"
+	"github.com/tenderly/avalanchego/cache"
+	"github.com/tenderly/avalanchego/ids"
+	"github.com/tenderly/avalanchego/proto/pb/p2p"
+	"github.com/tenderly/avalanchego/snow"
+	"github.com/tenderly/avalanchego/snow/choices"
+	"github.com/tenderly/avalanchego/snow/consensus/avalanche"
+	"github.com/tenderly/avalanchego/snow/engine/common"
+	"github.com/tenderly/avalanchego/utils/bimap"
+	"github.com/tenderly/avalanchego/utils/heap"
+	"github.com/tenderly/avalanchego/utils/set"
+	"github.com/tenderly/avalanchego/version"
 )
 
 const (

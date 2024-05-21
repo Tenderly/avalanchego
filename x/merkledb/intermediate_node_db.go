@@ -4,9 +4,9 @@
 package merkledb
 
 import (
-	"github.com/ava-labs/avalanchego/cache"
-	"github.com/ava-labs/avalanchego/database"
-	"github.com/ava-labs/avalanchego/utils"
+	"github.com/tenderly/avalanchego/cache"
+	"github.com/tenderly/avalanchego/database"
+	"github.com/tenderly/avalanchego/utils"
 )
 
 // Holds intermediate nodes. That is, those without values.

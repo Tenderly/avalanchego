@@ -8,16 +8,16 @@ import (
 	"crypto/tls"
 	"time"
 
-	"github.com/ava-labs/avalanchego/ids"
-	"github.com/ava-labs/avalanchego/network/dialer"
-	"github.com/ava-labs/avalanchego/network/throttling"
-	"github.com/ava-labs/avalanchego/snow/networking/tracker"
-	"github.com/ava-labs/avalanchego/snow/uptime"
-	"github.com/ava-labs/avalanchego/snow/validators"
-	"github.com/ava-labs/avalanchego/utils/compression"
-	"github.com/ava-labs/avalanchego/utils/crypto/bls"
-	"github.com/ava-labs/avalanchego/utils/ips"
-	"github.com/ava-labs/avalanchego/utils/set"
+	"github.com/tenderly/avalanchego/ids"
+	"github.com/tenderly/avalanchego/network/dialer"
+	"github.com/tenderly/avalanchego/network/throttling"
+	"github.com/tenderly/avalanchego/snow/networking/tracker"
+	"github.com/tenderly/avalanchego/snow/uptime"
+	"github.com/tenderly/avalanchego/snow/validators"
+	"github.com/tenderly/avalanchego/utils/compression"
+	"github.com/tenderly/avalanchego/utils/crypto/bls"
+	"github.com/tenderly/avalanchego/utils/ips"
+	"github.com/tenderly/avalanchego/utils/set"
 )
 
 // HealthConfig describes parameters for network layer health checks.

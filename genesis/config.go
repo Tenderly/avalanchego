@@ -13,12 +13,12 @@ import (
 	"os"
 	"path/filepath"
 
-	"github.com/ava-labs/avalanchego/ids"
-	"github.com/ava-labs/avalanchego/utils"
-	"github.com/ava-labs/avalanchego/utils/constants"
-	"github.com/ava-labs/avalanchego/utils/formatting/address"
-	"github.com/ava-labs/avalanchego/utils/math"
-	"github.com/ava-labs/avalanchego/vms/platformvm/signer"
+	"github.com/tenderly/avalanchego/ids"
+	"github.com/tenderly/avalanchego/utils"
+	"github.com/tenderly/avalanchego/utils/constants"
+	"github.com/tenderly/avalanchego/utils/formatting/address"
+	"github.com/tenderly/avalanchego/utils/math"
+	"github.com/tenderly/avalanchego/vms/platformvm/signer"
 )
 
 var (

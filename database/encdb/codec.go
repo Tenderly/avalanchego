@@ -4,8 +4,8 @@
 package encdb
 
 import (
-	"github.com/ava-labs/avalanchego/codec"
-	"github.com/ava-labs/avalanchego/codec/linearcodec"
+	"github.com/tenderly/avalanchego/codec"
+	"github.com/tenderly/avalanchego/codec/linearcodec"
 )
 
 const CodecVersion = 0

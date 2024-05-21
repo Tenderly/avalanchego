@@ -6,9 +6,9 @@ package txheap
 import (
 	"time"
 
-	"github.com/ava-labs/avalanchego/ids"
-	"github.com/ava-labs/avalanchego/utils/heap"
-	"github.com/ava-labs/avalanchego/vms/platformvm/txs"
+	"github.com/tenderly/avalanchego/ids"
+	"github.com/tenderly/avalanchego/utils/heap"
+	"github.com/tenderly/avalanchego/vms/platformvm/txs"
 )
 
 var _ TimedHeap = (*byEndTime)(nil)

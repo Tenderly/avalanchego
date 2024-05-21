@@ -9,11 +9,11 @@ import (
 
 	"github.com/stretchr/testify/require"
 
-	"github.com/ava-labs/avalanchego/codec"
-	"github.com/ava-labs/avalanchego/database"
-	"github.com/ava-labs/avalanchego/database/memdb"
-	"github.com/ava-labs/avalanchego/ids"
-	"github.com/ava-labs/avalanchego/utils/wrappers"
+	"github.com/tenderly/avalanchego/codec"
+	"github.com/tenderly/avalanchego/database"
+	"github.com/tenderly/avalanchego/database/memdb"
+	"github.com/tenderly/avalanchego/ids"
+	"github.com/tenderly/avalanchego/utils/wrappers"
 )
 
 func TestValidatorUptimes(t *testing.T) {

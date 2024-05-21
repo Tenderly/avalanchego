@@ -7,8 +7,8 @@ import (
 	"encoding/binary"
 	"fmt"
 
-	"github.com/ava-labs/avalanchego/database"
-	"github.com/ava-labs/avalanchego/ids"
+	"github.com/tenderly/avalanchego/database"
+	"github.com/tenderly/avalanchego/ids"
 )
 
 const (

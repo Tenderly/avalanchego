@@ -12,18 +12,18 @@ import (
 	"github.com/stretchr/testify/require"
 	"go.uber.org/mock/gomock"
 
-	"github.com/ava-labs/avalanchego/ids"
-	"github.com/ava-labs/avalanchego/snow"
-	"github.com/ava-labs/avalanchego/utils"
-	"github.com/ava-labs/avalanchego/utils/constants"
-	"github.com/ava-labs/avalanchego/utils/units"
-	"github.com/ava-labs/avalanchego/vms/components/avax"
-	"github.com/ava-labs/avalanchego/vms/platformvm/fx"
-	"github.com/ava-labs/avalanchego/vms/platformvm/stakeable"
-	"github.com/ava-labs/avalanchego/vms/secp256k1fx"
-	"github.com/ava-labs/avalanchego/vms/types"
+	"github.com/tenderly/avalanchego/ids"
+	"github.com/tenderly/avalanchego/snow"
+	"github.com/tenderly/avalanchego/utils"
+	"github.com/tenderly/avalanchego/utils/constants"
+	"github.com/tenderly/avalanchego/utils/units"
+	"github.com/tenderly/avalanchego/vms/components/avax"
+	"github.com/tenderly/avalanchego/vms/platformvm/fx"
+	"github.com/tenderly/avalanchego/vms/platformvm/stakeable"
+	"github.com/tenderly/avalanchego/vms/secp256k1fx"
+	"github.com/tenderly/avalanchego/vms/types"
 
-	safemath "github.com/ava-labs/avalanchego/utils/math"
+	safemath "github.com/tenderly/avalanchego/utils/math"
 )
 
 var errCustom = errors.New("custom error")

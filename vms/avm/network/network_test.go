@@ -13,19 +13,19 @@ import (
 	"github.com/stretchr/testify/require"
 	"go.uber.org/mock/gomock"
 
-	"github.com/ava-labs/avalanchego/ids"
-	"github.com/ava-labs/avalanchego/snow/engine/common"
-	"github.com/ava-labs/avalanchego/snow/validators"
-	"github.com/ava-labs/avalanchego/utils/logging"
-	"github.com/ava-labs/avalanchego/vms/avm/block/executor"
-	"github.com/ava-labs/avalanchego/vms/avm/fxs"
-	"github.com/ava-labs/avalanchego/vms/avm/txs"
-	"github.com/ava-labs/avalanchego/vms/nftfx"
-	"github.com/ava-labs/avalanchego/vms/propertyfx"
-	"github.com/ava-labs/avalanchego/vms/secp256k1fx"
-	"github.com/ava-labs/avalanchego/vms/txs/mempool"
+	"github.com/tenderly/avalanchego/ids"
+	"github.com/tenderly/avalanchego/snow/engine/common"
+	"github.com/tenderly/avalanchego/snow/validators"
+	"github.com/tenderly/avalanchego/utils/logging"
+	"github.com/tenderly/avalanchego/vms/avm/block/executor"
+	"github.com/tenderly/avalanchego/vms/avm/fxs"
+	"github.com/tenderly/avalanchego/vms/avm/txs"
+	"github.com/tenderly/avalanchego/vms/nftfx"
+	"github.com/tenderly/avalanchego/vms/propertyfx"
+	"github.com/tenderly/avalanchego/vms/secp256k1fx"
+	"github.com/tenderly/avalanchego/vms/txs/mempool"
 
-	xmempool "github.com/ava-labs/avalanchego/vms/avm/txs/mempool"
+	xmempool "github.com/tenderly/avalanchego/vms/avm/txs/mempool"
 )
 
 var (

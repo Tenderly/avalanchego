@@ -15,16 +15,16 @@ import (
 	"google.golang.org/grpc/status"
 	"google.golang.org/protobuf/proto"
 
-	"github.com/ava-labs/avalanchego/ids"
-	"github.com/ava-labs/avalanchego/snow/engine/common"
-	"github.com/ava-labs/avalanchego/utils/constants"
-	"github.com/ava-labs/avalanchego/utils/hashing"
-	"github.com/ava-labs/avalanchego/utils/logging"
-	"github.com/ava-labs/avalanchego/utils/maybe"
-	"github.com/ava-labs/avalanchego/utils/units"
-	"github.com/ava-labs/avalanchego/x/merkledb"
+	"github.com/tenderly/avalanchego/ids"
+	"github.com/tenderly/avalanchego/snow/engine/common"
+	"github.com/tenderly/avalanchego/utils/constants"
+	"github.com/tenderly/avalanchego/utils/hashing"
+	"github.com/tenderly/avalanchego/utils/logging"
+	"github.com/tenderly/avalanchego/utils/maybe"
+	"github.com/tenderly/avalanchego/utils/units"
+	"github.com/tenderly/avalanchego/x/merkledb"
 
-	pb "github.com/ava-labs/avalanchego/proto/pb/sync"
+	pb "github.com/tenderly/avalanchego/proto/pb/sync"
 )
 
 const (

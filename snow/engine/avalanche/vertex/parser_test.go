@@ -8,8 +8,8 @@ import (
 
 	"github.com/stretchr/testify/require"
 
-	"github.com/ava-labs/avalanchego/codec"
-	"github.com/ava-labs/avalanchego/ids"
+	"github.com/tenderly/avalanchego/codec"
+	"github.com/tenderly/avalanchego/ids"
 )
 
 func TestParseInvalid(t *testing.T) {

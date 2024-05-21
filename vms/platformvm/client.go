@@ -7,16 +7,16 @@ import (
 	"context"
 	"time"
 
-	"github.com/ava-labs/avalanchego/api"
-	"github.com/ava-labs/avalanchego/ids"
-	"github.com/ava-labs/avalanchego/snow/validators"
-	"github.com/ava-labs/avalanchego/utils/constants"
-	"github.com/ava-labs/avalanchego/utils/crypto/secp256k1"
-	"github.com/ava-labs/avalanchego/utils/formatting"
-	"github.com/ava-labs/avalanchego/utils/formatting/address"
-	"github.com/ava-labs/avalanchego/utils/json"
-	"github.com/ava-labs/avalanchego/utils/rpc"
-	"github.com/ava-labs/avalanchego/vms/platformvm/status"
+	"github.com/tenderly/avalanchego/api"
+	"github.com/tenderly/avalanchego/ids"
+	"github.com/tenderly/avalanchego/snow/validators"
+	"github.com/tenderly/avalanchego/utils/constants"
+	"github.com/tenderly/avalanchego/utils/crypto/secp256k1"
+	"github.com/tenderly/avalanchego/utils/formatting"
+	"github.com/tenderly/avalanchego/utils/formatting/address"
+	"github.com/tenderly/avalanchego/utils/json"
+	"github.com/tenderly/avalanchego/utils/rpc"
+	"github.com/tenderly/avalanchego/vms/platformvm/status"
 )
 
 var _ Client = (*client)(nil)

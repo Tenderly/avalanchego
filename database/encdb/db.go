@@ -12,8 +12,8 @@ import (
 
 	"golang.org/x/crypto/chacha20poly1305"
 
-	"github.com/ava-labs/avalanchego/database"
-	"github.com/ava-labs/avalanchego/utils/hashing"
+	"github.com/tenderly/avalanchego/database"
+	"github.com/tenderly/avalanchego/utils/hashing"
 )
 
 var (

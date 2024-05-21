@@ -15,35 +15,35 @@ import (
 	"github.com/prometheus/client_golang/prometheus"
 	"go.uber.org/zap"
 
-	"github.com/ava-labs/avalanchego/cache"
-	"github.com/ava-labs/avalanchego/cache/metercacher"
-	"github.com/ava-labs/avalanchego/database"
-	"github.com/ava-labs/avalanchego/database/linkeddb"
-	"github.com/ava-labs/avalanchego/database/prefixdb"
-	"github.com/ava-labs/avalanchego/database/versiondb"
-	"github.com/ava-labs/avalanchego/ids"
-	"github.com/ava-labs/avalanchego/snow"
-	"github.com/ava-labs/avalanchego/snow/choices"
-	"github.com/ava-labs/avalanchego/snow/uptime"
-	"github.com/ava-labs/avalanchego/snow/validators"
-	"github.com/ava-labs/avalanchego/utils"
-	"github.com/ava-labs/avalanchego/utils/constants"
-	"github.com/ava-labs/avalanchego/utils/crypto/bls"
-	"github.com/ava-labs/avalanchego/utils/hashing"
-	"github.com/ava-labs/avalanchego/utils/logging"
-	"github.com/ava-labs/avalanchego/utils/timer"
-	"github.com/ava-labs/avalanchego/utils/wrappers"
-	"github.com/ava-labs/avalanchego/vms/components/avax"
-	"github.com/ava-labs/avalanchego/vms/platformvm/block"
-	"github.com/ava-labs/avalanchego/vms/platformvm/config"
-	"github.com/ava-labs/avalanchego/vms/platformvm/fx"
-	"github.com/ava-labs/avalanchego/vms/platformvm/genesis"
-	"github.com/ava-labs/avalanchego/vms/platformvm/metrics"
-	"github.com/ava-labs/avalanchego/vms/platformvm/reward"
-	"github.com/ava-labs/avalanchego/vms/platformvm/status"
-	"github.com/ava-labs/avalanchego/vms/platformvm/txs"
+	"github.com/tenderly/avalanchego/cache"
+	"github.com/tenderly/avalanchego/cache/metercacher"
+	"github.com/tenderly/avalanchego/database"
+	"github.com/tenderly/avalanchego/database/linkeddb"
+	"github.com/tenderly/avalanchego/database/prefixdb"
+	"github.com/tenderly/avalanchego/database/versiondb"
+	"github.com/tenderly/avalanchego/ids"
+	"github.com/tenderly/avalanchego/snow"
+	"github.com/tenderly/avalanchego/snow/choices"
+	"github.com/tenderly/avalanchego/snow/uptime"
+	"github.com/tenderly/avalanchego/snow/validators"
+	"github.com/tenderly/avalanchego/utils"
+	"github.com/tenderly/avalanchego/utils/constants"
+	"github.com/tenderly/avalanchego/utils/crypto/bls"
+	"github.com/tenderly/avalanchego/utils/hashing"
+	"github.com/tenderly/avalanchego/utils/logging"
+	"github.com/tenderly/avalanchego/utils/timer"
+	"github.com/tenderly/avalanchego/utils/wrappers"
+	"github.com/tenderly/avalanchego/vms/components/avax"
+	"github.com/tenderly/avalanchego/vms/platformvm/block"
+	"github.com/tenderly/avalanchego/vms/platformvm/config"
+	"github.com/tenderly/avalanchego/vms/platformvm/fx"
+	"github.com/tenderly/avalanchego/vms/platformvm/genesis"
+	"github.com/tenderly/avalanchego/vms/platformvm/metrics"
+	"github.com/tenderly/avalanchego/vms/platformvm/reward"
+	"github.com/tenderly/avalanchego/vms/platformvm/status"
+	"github.com/tenderly/avalanchego/vms/platformvm/txs"
 
-	safemath "github.com/ava-labs/avalanchego/utils/math"
+	safemath "github.com/tenderly/avalanchego/utils/math"
 )
 
 const (
@@ -199,7 +199,7 @@ type State interface {
 	Close() error
 }
 
-// Prior to https://github.com/ava-labs/avalanchego/pull/1719, blocks were
+// Prior to https://github.com/tenderly/avalanchego/pull/1719, blocks were
 // stored as a map from blkID to stateBlk. Nodes synced prior to this PR may
 // still have blocks partially stored using this legacy format.
 //

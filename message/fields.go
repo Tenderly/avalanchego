@@ -7,8 +7,8 @@ import (
 	"errors"
 	"time"
 
-	"github.com/ava-labs/avalanchego/ids"
-	"github.com/ava-labs/avalanchego/proto/pb/p2p"
+	"github.com/tenderly/avalanchego/ids"
+	"github.com/tenderly/avalanchego/proto/pb/p2p"
 )
 
 var (

@@ -16,12 +16,12 @@ import (
 	"github.com/stretchr/testify/require"
 	"gonum.org/v1/gonum/mathext/prng"
 
-	"github.com/ava-labs/avalanchego/ids"
-	"github.com/ava-labs/avalanchego/snow/choices"
-	"github.com/ava-labs/avalanchego/snow/consensus/snowball"
-	"github.com/ava-labs/avalanchego/snow/consensus/snowman/snowmantest"
-	"github.com/ava-labs/avalanchego/snow/snowtest"
-	"github.com/ava-labs/avalanchego/utils/bag"
+	"github.com/tenderly/avalanchego/ids"
+	"github.com/tenderly/avalanchego/snow/choices"
+	"github.com/tenderly/avalanchego/snow/consensus/snowball"
+	"github.com/tenderly/avalanchego/snow/consensus/snowman/snowmantest"
+	"github.com/tenderly/avalanchego/snow/snowtest"
+	"github.com/tenderly/avalanchego/utils/bag"
 )
 
 type testFunc func(*testing.T, Factory)

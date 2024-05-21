@@ -8,12 +8,12 @@ import (
 	"fmt"
 	"time"
 
-	"github.com/ava-labs/avalanchego/ids"
-	"github.com/ava-labs/avalanchego/utils/constants"
-	"github.com/ava-labs/avalanchego/utils/timer/mockable"
-	"github.com/ava-labs/avalanchego/vms/platformvm/reward"
-	"github.com/ava-labs/avalanchego/vms/platformvm/state"
-	"github.com/ava-labs/avalanchego/vms/platformvm/txs"
+	"github.com/tenderly/avalanchego/ids"
+	"github.com/tenderly/avalanchego/utils/constants"
+	"github.com/tenderly/avalanchego/utils/timer/mockable"
+	"github.com/tenderly/avalanchego/vms/platformvm/reward"
+	"github.com/tenderly/avalanchego/vms/platformvm/state"
+	"github.com/tenderly/avalanchego/vms/platformvm/txs"
 )
 
 var (

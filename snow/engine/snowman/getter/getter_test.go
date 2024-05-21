@@ -13,13 +13,13 @@ import (
 	"github.com/stretchr/testify/require"
 	"go.uber.org/mock/gomock"
 
-	"github.com/ava-labs/avalanchego/ids"
-	"github.com/ava-labs/avalanchego/snow/consensus/snowman"
-	"github.com/ava-labs/avalanchego/snow/consensus/snowman/snowmantest"
-	"github.com/ava-labs/avalanchego/snow/engine/common"
-	"github.com/ava-labs/avalanchego/snow/engine/snowman/block"
-	"github.com/ava-labs/avalanchego/utils/logging"
-	"github.com/ava-labs/avalanchego/utils/set"
+	"github.com/tenderly/avalanchego/ids"
+	"github.com/tenderly/avalanchego/snow/consensus/snowman"
+	"github.com/tenderly/avalanchego/snow/consensus/snowman/snowmantest"
+	"github.com/tenderly/avalanchego/snow/engine/common"
+	"github.com/tenderly/avalanchego/snow/engine/snowman/block"
+	"github.com/tenderly/avalanchego/utils/logging"
+	"github.com/tenderly/avalanchego/utils/set"
 )
 
 var errUnknownBlock = errors.New("unknown block")

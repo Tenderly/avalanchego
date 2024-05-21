@@ -8,8 +8,8 @@ import (
 	"log"
 	"os"
 
-	"github.com/ava-labs/avalanchego/tests/antithesis"
-	"github.com/ava-labs/avalanchego/tests/fixture/tmpnet"
+	"github.com/tenderly/avalanchego/tests/antithesis"
+	"github.com/tenderly/avalanchego/tests/fixture/tmpnet"
 )
 
 const baseImageName = "antithesis-avalanchego"

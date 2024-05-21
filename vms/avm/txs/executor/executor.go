@@ -6,13 +6,13 @@ package executor
 import (
 	"fmt"
 
-	"github.com/ava-labs/avalanchego/chains/atomic"
-	"github.com/ava-labs/avalanchego/codec"
-	"github.com/ava-labs/avalanchego/ids"
-	"github.com/ava-labs/avalanchego/utils/set"
-	"github.com/ava-labs/avalanchego/vms/avm/state"
-	"github.com/ava-labs/avalanchego/vms/avm/txs"
-	"github.com/ava-labs/avalanchego/vms/components/avax"
+	"github.com/tenderly/avalanchego/chains/atomic"
+	"github.com/tenderly/avalanchego/codec"
+	"github.com/tenderly/avalanchego/ids"
+	"github.com/tenderly/avalanchego/utils/set"
+	"github.com/tenderly/avalanchego/vms/avm/state"
+	"github.com/tenderly/avalanchego/vms/avm/txs"
+	"github.com/tenderly/avalanchego/vms/components/avax"
 )
 
 var _ txs.Visitor = (*Executor)(nil)

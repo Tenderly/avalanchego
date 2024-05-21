@@ -6,13 +6,13 @@ package genesis
 import (
 	"path"
 
-	"github.com/ava-labs/avalanchego/ids"
-	"github.com/ava-labs/avalanchego/utils/constants"
-	"github.com/ava-labs/avalanchego/vms/nftfx"
-	"github.com/ava-labs/avalanchego/vms/platformvm/genesis"
-	"github.com/ava-labs/avalanchego/vms/platformvm/txs"
-	"github.com/ava-labs/avalanchego/vms/propertyfx"
-	"github.com/ava-labs/avalanchego/vms/secp256k1fx"
+	"github.com/tenderly/avalanchego/ids"
+	"github.com/tenderly/avalanchego/utils/constants"
+	"github.com/tenderly/avalanchego/vms/nftfx"
+	"github.com/tenderly/avalanchego/vms/platformvm/genesis"
+	"github.com/tenderly/avalanchego/vms/platformvm/txs"
+	"github.com/tenderly/avalanchego/vms/propertyfx"
+	"github.com/tenderly/avalanchego/vms/secp256k1fx"
 )
 
 var (

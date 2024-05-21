@@ -11,7 +11,7 @@ import (
 
 	"github.com/cockroachdb/pebble"
 
-	"github.com/ava-labs/avalanchego/database"
+	"github.com/tenderly/avalanchego/database"
 )
 
 var (

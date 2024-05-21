@@ -10,15 +10,15 @@ import (
 
 	"github.com/stretchr/testify/require"
 
-	"github.com/ava-labs/avalanchego/chains/atomic"
-	"github.com/ava-labs/avalanchego/database/prefixdb"
-	"github.com/ava-labs/avalanchego/ids"
-	"github.com/ava-labs/avalanchego/utils/crypto/secp256k1"
-	"github.com/ava-labs/avalanchego/vms/components/avax"
-	"github.com/ava-labs/avalanchego/vms/platformvm/state"
-	"github.com/ava-labs/avalanchego/vms/platformvm/txs"
-	"github.com/ava-labs/avalanchego/vms/secp256k1fx"
-	"github.com/ava-labs/avalanchego/wallet/chain/p/builder"
+	"github.com/tenderly/avalanchego/chains/atomic"
+	"github.com/tenderly/avalanchego/database/prefixdb"
+	"github.com/tenderly/avalanchego/ids"
+	"github.com/tenderly/avalanchego/utils/crypto/secp256k1"
+	"github.com/tenderly/avalanchego/vms/components/avax"
+	"github.com/tenderly/avalanchego/vms/platformvm/state"
+	"github.com/tenderly/avalanchego/vms/platformvm/txs"
+	"github.com/tenderly/avalanchego/vms/secp256k1fx"
+	"github.com/tenderly/avalanchego/wallet/chain/p/builder"
 )
 
 var fundedSharedMemoryCalls byte

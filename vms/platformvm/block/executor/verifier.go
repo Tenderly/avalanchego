@@ -7,14 +7,14 @@ import (
 	"errors"
 	"fmt"
 
-	"github.com/ava-labs/avalanchego/chains/atomic"
-	"github.com/ava-labs/avalanchego/ids"
-	"github.com/ava-labs/avalanchego/utils/set"
-	"github.com/ava-labs/avalanchego/vms/platformvm/block"
-	"github.com/ava-labs/avalanchego/vms/platformvm/state"
-	"github.com/ava-labs/avalanchego/vms/platformvm/status"
-	"github.com/ava-labs/avalanchego/vms/platformvm/txs"
-	"github.com/ava-labs/avalanchego/vms/platformvm/txs/executor"
+	"github.com/tenderly/avalanchego/chains/atomic"
+	"github.com/tenderly/avalanchego/ids"
+	"github.com/tenderly/avalanchego/utils/set"
+	"github.com/tenderly/avalanchego/vms/platformvm/block"
+	"github.com/tenderly/avalanchego/vms/platformvm/state"
+	"github.com/tenderly/avalanchego/vms/platformvm/status"
+	"github.com/tenderly/avalanchego/vms/platformvm/txs"
+	"github.com/tenderly/avalanchego/vms/platformvm/txs/executor"
 )
 
 var (

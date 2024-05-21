@@ -6,10 +6,10 @@ package mempool
 import (
 	"github.com/prometheus/client_golang/prometheus"
 
-	"github.com/ava-labs/avalanchego/snow/engine/common"
-	"github.com/ava-labs/avalanchego/vms/avm/txs"
+	"github.com/tenderly/avalanchego/snow/engine/common"
+	"github.com/tenderly/avalanchego/vms/avm/txs"
 
-	txmempool "github.com/ava-labs/avalanchego/vms/txs/mempool"
+	txmempool "github.com/tenderly/avalanchego/vms/txs/mempool"
 )
 
 var _ Mempool = (*mempool)(nil)

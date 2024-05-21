@@ -10,7 +10,7 @@ import (
 	"github.com/google/btree"
 	"github.com/stretchr/testify/require"
 
-	"github.com/ava-labs/avalanchego/ids"
+	"github.com/tenderly/avalanchego/ids"
 )
 
 func TestTreeIterator(t *testing.T) {

@@ -8,8 +8,8 @@ import (
 	"fmt"
 	"time"
 
-	"github.com/ava-labs/avalanchego/ids"
-	"github.com/ava-labs/avalanchego/vms/example/xsvm/tx"
+	"github.com/tenderly/avalanchego/ids"
+	"github.com/tenderly/avalanchego/vms/example/xsvm/tx"
 )
 
 type TxIssuance struct {

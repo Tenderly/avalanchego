@@ -6,7 +6,7 @@ package metercacher
 import (
 	"github.com/prometheus/client_golang/prometheus"
 
-	"github.com/ava-labs/avalanchego/utils"
+	"github.com/tenderly/avalanchego/utils"
 )
 
 const (

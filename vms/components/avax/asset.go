@@ -6,8 +6,8 @@ package avax
 import (
 	"errors"
 
-	"github.com/ava-labs/avalanchego/ids"
-	"github.com/ava-labs/avalanchego/vms/components/verify"
+	"github.com/tenderly/avalanchego/ids"
+	"github.com/tenderly/avalanchego/vms/components/verify"
 )
 
 var (

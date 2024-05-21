@@ -10,16 +10,16 @@ import (
 	"github.com/prometheus/client_golang/prometheus"
 	"github.com/stretchr/testify/require"
 
-	"github.com/ava-labs/avalanchego/database"
-	"github.com/ava-labs/avalanchego/database/memdb"
-	"github.com/ava-labs/avalanchego/database/versiondb"
-	"github.com/ava-labs/avalanchego/ids"
-	"github.com/ava-labs/avalanchego/version"
-	"github.com/ava-labs/avalanchego/vms/avm/block"
-	"github.com/ava-labs/avalanchego/vms/avm/fxs"
-	"github.com/ava-labs/avalanchego/vms/avm/txs"
-	"github.com/ava-labs/avalanchego/vms/components/avax"
-	"github.com/ava-labs/avalanchego/vms/secp256k1fx"
+	"github.com/tenderly/avalanchego/database"
+	"github.com/tenderly/avalanchego/database/memdb"
+	"github.com/tenderly/avalanchego/database/versiondb"
+	"github.com/tenderly/avalanchego/ids"
+	"github.com/tenderly/avalanchego/version"
+	"github.com/tenderly/avalanchego/vms/avm/block"
+	"github.com/tenderly/avalanchego/vms/avm/fxs"
+	"github.com/tenderly/avalanchego/vms/avm/txs"
+	"github.com/tenderly/avalanchego/vms/components/avax"
+	"github.com/tenderly/avalanchego/vms/secp256k1fx"
 )
 
 const trackChecksums = false

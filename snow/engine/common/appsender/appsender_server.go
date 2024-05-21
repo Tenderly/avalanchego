@@ -8,11 +8,11 @@ import (
 
 	"google.golang.org/protobuf/types/known/emptypb"
 
-	"github.com/ava-labs/avalanchego/ids"
-	"github.com/ava-labs/avalanchego/snow/engine/common"
-	"github.com/ava-labs/avalanchego/utils/set"
+	"github.com/tenderly/avalanchego/ids"
+	"github.com/tenderly/avalanchego/snow/engine/common"
+	"github.com/tenderly/avalanchego/utils/set"
 
-	appsenderpb "github.com/ava-labs/avalanchego/proto/pb/appsender"
+	appsenderpb "github.com/tenderly/avalanchego/proto/pb/appsender"
 )
 
 var _ appsenderpb.AppSenderServer = (*Server)(nil)

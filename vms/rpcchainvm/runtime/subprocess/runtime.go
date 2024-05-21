@@ -15,12 +15,12 @@ import (
 
 	"go.uber.org/zap"
 
-	"github.com/ava-labs/avalanchego/utils/logging"
-	"github.com/ava-labs/avalanchego/vms/rpcchainvm/grpcutils"
-	"github.com/ava-labs/avalanchego/vms/rpcchainvm/gruntime"
-	"github.com/ava-labs/avalanchego/vms/rpcchainvm/runtime"
+	"github.com/tenderly/avalanchego/utils/logging"
+	"github.com/tenderly/avalanchego/vms/rpcchainvm/grpcutils"
+	"github.com/tenderly/avalanchego/vms/rpcchainvm/gruntime"
+	"github.com/tenderly/avalanchego/vms/rpcchainvm/runtime"
 
-	pb "github.com/ava-labs/avalanchego/proto/pb/vm/runtime"
+	pb "github.com/tenderly/avalanchego/proto/pb/vm/runtime"
 )
 
 type Config struct {

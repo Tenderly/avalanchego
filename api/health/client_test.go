@@ -10,7 +10,7 @@ import (
 
 	"github.com/stretchr/testify/require"
 
-	"github.com/ava-labs/avalanchego/utils/rpc"
+	"github.com/tenderly/avalanchego/utils/rpc"
 )
 
 type mockClient struct {

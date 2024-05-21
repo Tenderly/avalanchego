@@ -8,7 +8,7 @@ import (
 
 	"github.com/stretchr/testify/require"
 
-	"github.com/ava-labs/avalanchego/ids"
+	"github.com/tenderly/avalanchego/ids"
 )
 
 // BootstrapTrackerTest is a test subnet

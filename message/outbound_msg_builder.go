@@ -6,10 +6,10 @@ package message
 import (
 	"time"
 
-	"github.com/ava-labs/avalanchego/ids"
-	"github.com/ava-labs/avalanchego/proto/pb/p2p"
-	"github.com/ava-labs/avalanchego/utils/compression"
-	"github.com/ava-labs/avalanchego/utils/ips"
+	"github.com/tenderly/avalanchego/ids"
+	"github.com/tenderly/avalanchego/proto/pb/p2p"
+	"github.com/tenderly/avalanchego/utils/compression"
+	"github.com/tenderly/avalanchego/utils/ips"
 )
 
 var _ OutboundMsgBuilder = (*outMsgBuilder)(nil)

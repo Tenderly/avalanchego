@@ -14,8 +14,8 @@ import (
 	"github.com/shirou/gopsutil/process"
 	"go.uber.org/zap"
 
-	"github.com/ava-labs/avalanchego/utils/logging"
-	"github.com/ava-labs/avalanchego/utils/storage"
+	"github.com/tenderly/avalanchego/utils/logging"
+	"github.com/tenderly/avalanchego/utils/storage"
 )
 
 var (

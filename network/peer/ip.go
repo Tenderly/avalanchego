@@ -10,11 +10,11 @@ import (
 	"fmt"
 	"time"
 
-	"github.com/ava-labs/avalanchego/staking"
-	"github.com/ava-labs/avalanchego/utils/crypto/bls"
-	"github.com/ava-labs/avalanchego/utils/hashing"
-	"github.com/ava-labs/avalanchego/utils/ips"
-	"github.com/ava-labs/avalanchego/utils/wrappers"
+	"github.com/tenderly/avalanchego/staking"
+	"github.com/tenderly/avalanchego/utils/crypto/bls"
+	"github.com/tenderly/avalanchego/utils/hashing"
+	"github.com/tenderly/avalanchego/utils/ips"
+	"github.com/tenderly/avalanchego/utils/wrappers"
 )
 
 var (

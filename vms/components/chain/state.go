@@ -10,14 +10,14 @@ import (
 
 	"github.com/prometheus/client_golang/prometheus"
 
-	"github.com/ava-labs/avalanchego/cache"
-	"github.com/ava-labs/avalanchego/cache/metercacher"
-	"github.com/ava-labs/avalanchego/database"
-	"github.com/ava-labs/avalanchego/ids"
-	"github.com/ava-labs/avalanchego/snow/choices"
-	"github.com/ava-labs/avalanchego/snow/consensus/snowman"
-	"github.com/ava-labs/avalanchego/snow/engine/snowman/block"
-	"github.com/ava-labs/avalanchego/utils/constants"
+	"github.com/tenderly/avalanchego/cache"
+	"github.com/tenderly/avalanchego/cache/metercacher"
+	"github.com/tenderly/avalanchego/database"
+	"github.com/tenderly/avalanchego/ids"
+	"github.com/tenderly/avalanchego/snow/choices"
+	"github.com/tenderly/avalanchego/snow/consensus/snowman"
+	"github.com/tenderly/avalanchego/snow/engine/snowman/block"
+	"github.com/tenderly/avalanchego/utils/constants"
 )
 
 func cachedBlockSize(_ ids.ID, bw *BlockWrapper) int {

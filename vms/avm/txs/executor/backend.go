@@ -6,11 +6,11 @@ package executor
 import (
 	"reflect"
 
-	"github.com/ava-labs/avalanchego/codec"
-	"github.com/ava-labs/avalanchego/ids"
-	"github.com/ava-labs/avalanchego/snow"
-	"github.com/ava-labs/avalanchego/vms/avm/config"
-	"github.com/ava-labs/avalanchego/vms/avm/fxs"
+	"github.com/tenderly/avalanchego/codec"
+	"github.com/tenderly/avalanchego/ids"
+	"github.com/tenderly/avalanchego/snow"
+	"github.com/tenderly/avalanchego/vms/avm/config"
+	"github.com/tenderly/avalanchego/vms/avm/fxs"
 )
 
 type Backend struct {

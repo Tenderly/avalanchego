@@ -9,12 +9,12 @@ import (
 	"math/big"
 	"sync"
 
-	"github.com/ava-labs/coreth/plugin/evm"
+	"github.com/tenderly/coreth/plugin/evm"
 
-	"github.com/ava-labs/avalanchego/database"
-	"github.com/ava-labs/avalanchego/utils/math"
-	"github.com/ava-labs/avalanchego/vms/components/avax"
-	"github.com/ava-labs/avalanchego/wallet/subnet/primary/common"
+	"github.com/tenderly/avalanchego/database"
+	"github.com/tenderly/avalanchego/utils/math"
+	"github.com/tenderly/avalanchego/vms/components/avax"
+	"github.com/tenderly/avalanchego/wallet/subnet/primary/common"
 
 	stdcontext "context"
 	ethcommon "github.com/ethereum/go-ethereum/common"

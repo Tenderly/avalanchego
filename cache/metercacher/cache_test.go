@@ -9,8 +9,8 @@ import (
 	"github.com/prometheus/client_golang/prometheus"
 	"github.com/stretchr/testify/require"
 
-	"github.com/ava-labs/avalanchego/cache"
-	"github.com/ava-labs/avalanchego/ids"
+	"github.com/tenderly/avalanchego/cache"
+	"github.com/tenderly/avalanchego/ids"
 )
 
 func TestInterface(t *testing.T) {

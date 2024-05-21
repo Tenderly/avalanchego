@@ -12,10 +12,10 @@ import (
 	"go.uber.org/zap"
 	"golang.org/x/time/rate"
 
-	"github.com/ava-labs/avalanchego/ids"
-	"github.com/ava-labs/avalanchego/utils/logging"
-	"github.com/ava-labs/avalanchego/utils/metric"
-	"github.com/ava-labs/avalanchego/utils/wrappers"
+	"github.com/tenderly/avalanchego/ids"
+	"github.com/tenderly/avalanchego/utils/logging"
+	"github.com/tenderly/avalanchego/utils/metric"
+	"github.com/tenderly/avalanchego/utils/wrappers"
 )
 
 var _ bandwidthThrottler = (*bandwidthThrottlerImpl)(nil)

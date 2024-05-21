@@ -8,15 +8,15 @@ import (
 	"log"
 	"time"
 
-	"github.com/ava-labs/coreth/plugin/evm"
+	"github.com/tenderly/coreth/plugin/evm"
 
-	"github.com/ava-labs/avalanchego/genesis"
-	"github.com/ava-labs/avalanchego/ids"
-	"github.com/ava-labs/avalanchego/utils/constants"
-	"github.com/ava-labs/avalanchego/utils/units"
-	"github.com/ava-labs/avalanchego/vms/components/avax"
-	"github.com/ava-labs/avalanchego/vms/secp256k1fx"
-	"github.com/ava-labs/avalanchego/wallet/subnet/primary"
+	"github.com/tenderly/avalanchego/genesis"
+	"github.com/tenderly/avalanchego/ids"
+	"github.com/tenderly/avalanchego/utils/constants"
+	"github.com/tenderly/avalanchego/utils/units"
+	"github.com/tenderly/avalanchego/vms/components/avax"
+	"github.com/tenderly/avalanchego/vms/secp256k1fx"
+	"github.com/tenderly/avalanchego/wallet/subnet/primary"
 )
 
 func main() {

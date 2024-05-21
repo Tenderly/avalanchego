@@ -11,9 +11,9 @@ import (
 	"github.com/prometheus/client_golang/prometheus"
 	"github.com/stretchr/testify/require"
 
-	"github.com/ava-labs/avalanchego/ids"
-	"github.com/ava-labs/avalanchego/snow/networking/benchlist"
-	"github.com/ava-labs/avalanchego/utils/timer"
+	"github.com/tenderly/avalanchego/ids"
+	"github.com/tenderly/avalanchego/snow/networking/benchlist"
+	"github.com/tenderly/avalanchego/utils/timer"
 )
 
 func TestManagerFire(t *testing.T) {

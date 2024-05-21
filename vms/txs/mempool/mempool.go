@@ -8,12 +8,12 @@ import (
 	"fmt"
 	"sync"
 
-	"github.com/ava-labs/avalanchego/cache"
-	"github.com/ava-labs/avalanchego/ids"
-	"github.com/ava-labs/avalanchego/utils/linked"
-	"github.com/ava-labs/avalanchego/utils/set"
-	"github.com/ava-labs/avalanchego/utils/setmap"
-	"github.com/ava-labs/avalanchego/utils/units"
+	"github.com/tenderly/avalanchego/cache"
+	"github.com/tenderly/avalanchego/ids"
+	"github.com/tenderly/avalanchego/utils/linked"
+	"github.com/tenderly/avalanchego/utils/set"
+	"github.com/tenderly/avalanchego/utils/setmap"
+	"github.com/tenderly/avalanchego/utils/units"
 )
 
 const (

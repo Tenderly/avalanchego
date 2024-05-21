@@ -4,9 +4,9 @@
 package platformvm
 
 import (
-	"github.com/ava-labs/avalanchego/utils/logging"
-	"github.com/ava-labs/avalanchego/vms"
-	"github.com/ava-labs/avalanchego/vms/platformvm/config"
+	"github.com/tenderly/avalanchego/utils/logging"
+	"github.com/tenderly/avalanchego/vms"
+	"github.com/tenderly/avalanchego/vms/platformvm/config"
 )
 
 var _ vms.Factory = (*Factory)(nil)

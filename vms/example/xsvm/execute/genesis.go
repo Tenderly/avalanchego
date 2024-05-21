@@ -4,11 +4,11 @@
 package execute
 
 import (
-	"github.com/ava-labs/avalanchego/database"
-	"github.com/ava-labs/avalanchego/ids"
-	"github.com/ava-labs/avalanchego/vms/example/xsvm/block"
-	"github.com/ava-labs/avalanchego/vms/example/xsvm/genesis"
-	"github.com/ava-labs/avalanchego/vms/example/xsvm/state"
+	"github.com/tenderly/avalanchego/database"
+	"github.com/tenderly/avalanchego/ids"
+	"github.com/tenderly/avalanchego/vms/example/xsvm/block"
+	"github.com/tenderly/avalanchego/vms/example/xsvm/genesis"
+	"github.com/tenderly/avalanchego/vms/example/xsvm/state"
 )
 
 func Genesis(db database.KeyValueReaderWriterDeleter, chainID ids.ID, g *genesis.Genesis) error {

@@ -6,9 +6,9 @@ package merkledb
 import (
 	"errors"
 
-	"github.com/ava-labs/avalanchego/cache"
-	"github.com/ava-labs/avalanchego/database"
-	"github.com/ava-labs/avalanchego/utils"
+	"github.com/tenderly/avalanchego/cache"
+	"github.com/tenderly/avalanchego/database"
+	"github.com/tenderly/avalanchego/utils"
 )
 
 var (

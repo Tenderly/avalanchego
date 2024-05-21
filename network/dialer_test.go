@@ -8,8 +8,8 @@ import (
 	"errors"
 	"net"
 
-	"github.com/ava-labs/avalanchego/network/dialer"
-	"github.com/ava-labs/avalanchego/utils/ips"
+	"github.com/tenderly/avalanchego/network/dialer"
+	"github.com/tenderly/avalanchego/utils/ips"
 )
 
 var (

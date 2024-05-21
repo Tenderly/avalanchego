@@ -8,10 +8,10 @@ import (
 	"reflect"
 	"sync"
 
-	"github.com/ava-labs/avalanchego/codec"
-	"github.com/ava-labs/avalanchego/codec/reflectcodec"
-	"github.com/ava-labs/avalanchego/utils/bimap"
-	"github.com/ava-labs/avalanchego/utils/wrappers"
+	"github.com/tenderly/avalanchego/codec"
+	"github.com/tenderly/avalanchego/codec/reflectcodec"
+	"github.com/tenderly/avalanchego/utils/bimap"
+	"github.com/tenderly/avalanchego/utils/wrappers"
 )
 
 var (

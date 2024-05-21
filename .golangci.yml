@@ -87,7 +87,7 @@ linters-settings:
       packages:
         deny:
           - pkg: "container/list"
-            desc: github.com/ava-labs/avalanchego/utils/linked should be used instead.
+            desc: github.com/tenderly/avalanchego/utils/linked should be used instead.
           - pkg: "github.com/golang/mock/gomock"
             desc: go.uber.org/mock/gomock should be used instead.
           - pkg: "github.com/stretchr/testify/assert"
@@ -115,7 +115,7 @@ linters-settings:
       - default
       - blank
       - dot
-      - prefix(github.com/ava-labs/avalanchego)
+      - prefix(github.com/tenderly/avalanchego)
       - alias
     skip-generated: true
     custom-order: true
@@ -129,9 +129,9 @@ linters-settings:
     no-extra-aliases: false
     # List of aliases
     alias:
-      - pkg: github.com/ava-labs/avalanchego/utils/math
+      - pkg: github.com/tenderly/avalanchego/utils/math
         alias: safemath
-      - pkg: github.com/ava-labs/avalanchego/utils/json
+      - pkg: github.com/tenderly/avalanchego/utils/json
         alias: avajson
   revive:
     rules:

@@ -8,11 +8,11 @@ import (
 
 	"github.com/stretchr/testify/require"
 
-	"github.com/ava-labs/avalanchego/api"
-	"github.com/ava-labs/avalanchego/ids"
-	"github.com/ava-labs/avalanchego/pubsub/bloom"
-	"github.com/ava-labs/avalanchego/utils/constants"
-	"github.com/ava-labs/avalanchego/utils/formatting/address"
+	"github.com/tenderly/avalanchego/api"
+	"github.com/tenderly/avalanchego/ids"
+	"github.com/tenderly/avalanchego/pubsub/bloom"
+	"github.com/tenderly/avalanchego/utils/constants"
+	"github.com/tenderly/avalanchego/utils/formatting/address"
 )
 
 func TestAddAddressesParseAddresses(t *testing.T) {

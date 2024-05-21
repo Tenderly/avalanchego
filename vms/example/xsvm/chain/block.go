@@ -8,18 +8,18 @@ import (
 	"errors"
 	"time"
 
-	"github.com/ava-labs/avalanchego/database"
-	"github.com/ava-labs/avalanchego/database/versiondb"
-	"github.com/ava-labs/avalanchego/ids"
-	"github.com/ava-labs/avalanchego/snow"
-	"github.com/ava-labs/avalanchego/snow/choices"
-	"github.com/ava-labs/avalanchego/snow/consensus/snowman"
-	"github.com/ava-labs/avalanchego/utils/set"
-	"github.com/ava-labs/avalanchego/vms/example/xsvm/execute"
-	"github.com/ava-labs/avalanchego/vms/example/xsvm/state"
+	"github.com/tenderly/avalanchego/database"
+	"github.com/tenderly/avalanchego/database/versiondb"
+	"github.com/tenderly/avalanchego/ids"
+	"github.com/tenderly/avalanchego/snow"
+	"github.com/tenderly/avalanchego/snow/choices"
+	"github.com/tenderly/avalanchego/snow/consensus/snowman"
+	"github.com/tenderly/avalanchego/utils/set"
+	"github.com/tenderly/avalanchego/vms/example/xsvm/execute"
+	"github.com/tenderly/avalanchego/vms/example/xsvm/state"
 
-	smblock "github.com/ava-labs/avalanchego/snow/engine/snowman/block"
-	xsblock "github.com/ava-labs/avalanchego/vms/example/xsvm/block"
+	smblock "github.com/tenderly/avalanchego/snow/engine/snowman/block"
+	xsblock "github.com/tenderly/avalanchego/vms/example/xsvm/block"
 )
 
 const maxClockSkew = 10 * time.Second

@@ -6,9 +6,9 @@ package account
 import (
 	"github.com/spf13/pflag"
 
-	"github.com/ava-labs/avalanchego/genesis"
-	"github.com/ava-labs/avalanchego/ids"
-	"github.com/ava-labs/avalanchego/wallet/subnet/primary"
+	"github.com/tenderly/avalanchego/genesis"
+	"github.com/tenderly/avalanchego/ids"
+	"github.com/tenderly/avalanchego/wallet/subnet/primary"
 )
 
 const (

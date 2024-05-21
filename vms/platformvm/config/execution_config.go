@@ -7,8 +7,8 @@ import (
 	"encoding/json"
 	"time"
 
-	"github.com/ava-labs/avalanchego/utils/units"
-	"github.com/ava-labs/avalanchego/vms/platformvm/network"
+	"github.com/tenderly/avalanchego/utils/units"
+	"github.com/tenderly/avalanchego/vms/platformvm/network"
 )
 
 var DefaultExecutionConfig = ExecutionConfig{

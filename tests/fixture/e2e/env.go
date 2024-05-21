@@ -12,13 +12,13 @@ import (
 
 	"github.com/stretchr/testify/require"
 
-	"github.com/ava-labs/avalanchego/api/info"
-	"github.com/ava-labs/avalanchego/config"
-	"github.com/ava-labs/avalanchego/tests"
-	"github.com/ava-labs/avalanchego/tests/fixture"
-	"github.com/ava-labs/avalanchego/tests/fixture/tmpnet"
-	"github.com/ava-labs/avalanchego/utils/crypto/secp256k1"
-	"github.com/ava-labs/avalanchego/vms/secp256k1fx"
+	"github.com/tenderly/avalanchego/api/info"
+	"github.com/tenderly/avalanchego/config"
+	"github.com/tenderly/avalanchego/tests"
+	"github.com/tenderly/avalanchego/tests/fixture"
+	"github.com/tenderly/avalanchego/tests/fixture/tmpnet"
+	"github.com/tenderly/avalanchego/utils/crypto/secp256k1"
+	"github.com/tenderly/avalanchego/vms/secp256k1fx"
 
 	ginkgo "github.com/onsi/ginkgo/v2"
 )

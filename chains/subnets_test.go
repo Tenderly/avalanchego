@@ -8,9 +8,9 @@ import (
 
 	"github.com/stretchr/testify/require"
 
-	"github.com/ava-labs/avalanchego/ids"
-	"github.com/ava-labs/avalanchego/subnets"
-	"github.com/ava-labs/avalanchego/utils/constants"
+	"github.com/tenderly/avalanchego/ids"
+	"github.com/tenderly/avalanchego/subnets"
+	"github.com/tenderly/avalanchego/utils/constants"
 )
 
 func TestNewSubnets(t *testing.T) {

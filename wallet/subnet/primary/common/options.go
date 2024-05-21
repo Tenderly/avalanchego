@@ -8,9 +8,9 @@ import (
 	"math/big"
 	"time"
 
-	"github.com/ava-labs/avalanchego/ids"
-	"github.com/ava-labs/avalanchego/utils/set"
-	"github.com/ava-labs/avalanchego/vms/secp256k1fx"
+	"github.com/tenderly/avalanchego/ids"
+	"github.com/tenderly/avalanchego/utils/set"
+	"github.com/tenderly/avalanchego/vms/secp256k1fx"
 
 	ethcommon "github.com/ethereum/go-ethereum/common"
 )

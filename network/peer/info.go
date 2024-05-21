@@ -6,9 +6,9 @@ package peer
 import (
 	"time"
 
-	"github.com/ava-labs/avalanchego/ids"
-	"github.com/ava-labs/avalanchego/utils/json"
-	"github.com/ava-labs/avalanchego/utils/set"
+	"github.com/tenderly/avalanchego/ids"
+	"github.com/tenderly/avalanchego/utils/json"
+	"github.com/tenderly/avalanchego/utils/set"
 )
 
 type Info struct {

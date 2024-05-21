@@ -6,9 +6,9 @@ package keystore
 import (
 	"context"
 
-	"github.com/ava-labs/avalanchego/api"
-	"github.com/ava-labs/avalanchego/utils/formatting"
-	"github.com/ava-labs/avalanchego/utils/rpc"
+	"github.com/tenderly/avalanchego/api"
+	"github.com/tenderly/avalanchego/utils/formatting"
+	"github.com/tenderly/avalanchego/utils/rpc"
 )
 
 var _ Client = (*client)(nil)

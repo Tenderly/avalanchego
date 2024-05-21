@@ -12,11 +12,11 @@ import (
 	"github.com/compose-spec/compose-go/types"
 	"gopkg.in/yaml.v3"
 
-	"github.com/ava-labs/avalanchego/config"
-	"github.com/ava-labs/avalanchego/tests/fixture/tmpnet"
-	"github.com/ava-labs/avalanchego/utils/constants"
-	"github.com/ava-labs/avalanchego/utils/logging"
-	"github.com/ava-labs/avalanchego/utils/perms"
+	"github.com/tenderly/avalanchego/config"
+	"github.com/tenderly/avalanchego/tests/fixture/tmpnet"
+	"github.com/tenderly/avalanchego/utils/constants"
+	"github.com/tenderly/avalanchego/utils/logging"
+	"github.com/tenderly/avalanchego/utils/perms"
 )
 
 // Initialize the given path with the docker-compose configuration (compose file and

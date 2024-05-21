@@ -4,13 +4,13 @@
 package chain
 
 import (
-	"github.com/ava-labs/avalanchego/database"
-	"github.com/ava-labs/avalanchego/ids"
-	"github.com/ava-labs/avalanchego/snow"
-	"github.com/ava-labs/avalanchego/snow/choices"
-	"github.com/ava-labs/avalanchego/vms/example/xsvm/state"
+	"github.com/tenderly/avalanchego/database"
+	"github.com/tenderly/avalanchego/ids"
+	"github.com/tenderly/avalanchego/snow"
+	"github.com/tenderly/avalanchego/snow/choices"
+	"github.com/tenderly/avalanchego/vms/example/xsvm/state"
 
-	xsblock "github.com/ava-labs/avalanchego/vms/example/xsvm/block"
+	xsblock "github.com/tenderly/avalanchego/vms/example/xsvm/block"
 )
 
 var _ Chain = (*chain)(nil)

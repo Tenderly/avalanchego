@@ -9,10 +9,10 @@ import (
 
 	"go.uber.org/zap"
 
-	"github.com/ava-labs/avalanchego/ids"
-	"github.com/ava-labs/avalanchego/network/p2p"
-	"github.com/ava-labs/avalanchego/utils/bloom"
-	"github.com/ava-labs/avalanchego/utils/logging"
+	"github.com/tenderly/avalanchego/ids"
+	"github.com/tenderly/avalanchego/network/p2p"
+	"github.com/tenderly/avalanchego/utils/bloom"
+	"github.com/tenderly/avalanchego/utils/logging"
 )
 
 var _ p2p.Handler = (*Handler[*testTx])(nil)

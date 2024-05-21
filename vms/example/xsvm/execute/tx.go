@@ -7,16 +7,16 @@ import (
 	"context"
 	"errors"
 
-	"github.com/ava-labs/avalanchego/database"
-	"github.com/ava-labs/avalanchego/ids"
-	"github.com/ava-labs/avalanchego/snow"
-	"github.com/ava-labs/avalanchego/snow/engine/snowman/block"
-	"github.com/ava-labs/avalanchego/utils"
-	"github.com/ava-labs/avalanchego/utils/hashing"
-	"github.com/ava-labs/avalanchego/utils/wrappers"
-	"github.com/ava-labs/avalanchego/vms/example/xsvm/state"
-	"github.com/ava-labs/avalanchego/vms/example/xsvm/tx"
-	"github.com/ava-labs/avalanchego/vms/platformvm/warp"
+	"github.com/tenderly/avalanchego/database"
+	"github.com/tenderly/avalanchego/ids"
+	"github.com/tenderly/avalanchego/snow"
+	"github.com/tenderly/avalanchego/snow/engine/snowman/block"
+	"github.com/tenderly/avalanchego/utils"
+	"github.com/tenderly/avalanchego/utils/hashing"
+	"github.com/tenderly/avalanchego/utils/wrappers"
+	"github.com/tenderly/avalanchego/vms/example/xsvm/state"
+	"github.com/tenderly/avalanchego/vms/example/xsvm/tx"
+	"github.com/tenderly/avalanchego/vms/platformvm/warp"
 )
 
 const (

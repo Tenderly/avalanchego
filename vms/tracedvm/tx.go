@@ -8,8 +8,8 @@ import (
 
 	"go.opentelemetry.io/otel/attribute"
 
-	"github.com/ava-labs/avalanchego/snow/consensus/snowstorm"
-	"github.com/ava-labs/avalanchego/trace"
+	"github.com/tenderly/avalanchego/snow/consensus/snowstorm"
+	"github.com/tenderly/avalanchego/trace"
 
 	oteltrace "go.opentelemetry.io/otel/trace"
 )

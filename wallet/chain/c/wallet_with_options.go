@@ -4,11 +4,11 @@
 package c
 
 import (
-	"github.com/ava-labs/coreth/plugin/evm"
+	"github.com/tenderly/coreth/plugin/evm"
 
-	"github.com/ava-labs/avalanchego/ids"
-	"github.com/ava-labs/avalanchego/vms/secp256k1fx"
-	"github.com/ava-labs/avalanchego/wallet/subnet/primary/common"
+	"github.com/tenderly/avalanchego/ids"
+	"github.com/tenderly/avalanchego/vms/secp256k1fx"
+	"github.com/tenderly/avalanchego/wallet/subnet/primary/common"
 
 	ethcommon "github.com/ethereum/go-ethereum/common"
 )

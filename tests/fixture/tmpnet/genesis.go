@@ -10,17 +10,17 @@ import (
 	"math/big"
 	"time"
 
-	"github.com/ava-labs/coreth/core"
-	"github.com/ava-labs/coreth/params"
-	"github.com/ava-labs/coreth/plugin/evm"
+	"github.com/tenderly/coreth/core"
+	"github.com/tenderly/coreth/params"
+	"github.com/tenderly/coreth/plugin/evm"
 
-	"github.com/ava-labs/avalanchego/genesis"
-	"github.com/ava-labs/avalanchego/ids"
-	"github.com/ava-labs/avalanchego/utils/constants"
-	"github.com/ava-labs/avalanchego/utils/crypto/secp256k1"
-	"github.com/ava-labs/avalanchego/utils/formatting/address"
-	"github.com/ava-labs/avalanchego/utils/units"
-	"github.com/ava-labs/avalanchego/vms/platformvm/reward"
+	"github.com/tenderly/avalanchego/genesis"
+	"github.com/tenderly/avalanchego/ids"
+	"github.com/tenderly/avalanchego/utils/constants"
+	"github.com/tenderly/avalanchego/utils/crypto/secp256k1"
+	"github.com/tenderly/avalanchego/utils/formatting/address"
+	"github.com/tenderly/avalanchego/utils/units"
+	"github.com/tenderly/avalanchego/vms/platformvm/reward"
 )
 
 const (
@@ -83,7 +83,7 @@ func NewTestGenesis(
 	// The eth address is only needed to link pre-mainnet assets. Until that capability
 	// becomes necessary for testing, use a bogus address.
 	//
-	// Reference: https://github.com/ava-labs/avalanchego/issues/1365#issuecomment-1511508767
+	// Reference: https://github.com/tenderly/avalanchego/issues/1365#issuecomment-1511508767
 	ethAddress := "0x0000000000000000000000000000000000000000"
 
 	now := time.Now()

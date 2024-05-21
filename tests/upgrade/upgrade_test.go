@@ -12,8 +12,8 @@ import (
 	"github.com/onsi/gomega"
 	"github.com/stretchr/testify/require"
 
-	"github.com/ava-labs/avalanchego/tests/fixture/e2e"
-	"github.com/ava-labs/avalanchego/tests/fixture/tmpnet"
+	"github.com/tenderly/avalanchego/tests/fixture/e2e"
+	"github.com/tenderly/avalanchego/tests/fixture/tmpnet"
 )
 
 func TestUpgrade(t *testing.T) {

@@ -4,8 +4,8 @@
 package xsvm
 
 import (
-	"github.com/ava-labs/avalanchego/utils/logging"
-	"github.com/ava-labs/avalanchego/vms"
+	"github.com/tenderly/avalanchego/utils/logging"
+	"github.com/tenderly/avalanchego/vms"
 )
 
 var _ vms.Factory = (*Factory)(nil)

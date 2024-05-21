@@ -8,7 +8,7 @@ import (
 
 	"github.com/stretchr/testify/require"
 
-	"github.com/ava-labs/avalanchego/utils/bag"
+	"github.com/tenderly/avalanchego/utils/bag"
 )
 
 func TestEarlyTermNoTraversalResults(t *testing.T) {

@@ -10,17 +10,17 @@ import (
 
 	"github.com/stretchr/testify/require"
 
-	"github.com/ava-labs/avalanchego/tests"
-	"github.com/ava-labs/avalanchego/tests/fixture/e2e"
-	"github.com/ava-labs/avalanchego/tests/fixture/tmpnet"
-	"github.com/ava-labs/avalanchego/utils/crypto/secp256k1"
-	"github.com/ava-labs/avalanchego/utils/units"
-	"github.com/ava-labs/avalanchego/vms/example/xsvm"
-	"github.com/ava-labs/avalanchego/vms/example/xsvm/api"
-	"github.com/ava-labs/avalanchego/vms/example/xsvm/cmd/issue/export"
-	"github.com/ava-labs/avalanchego/vms/example/xsvm/cmd/issue/importtx"
-	"github.com/ava-labs/avalanchego/vms/example/xsvm/cmd/issue/transfer"
-	"github.com/ava-labs/avalanchego/vms/example/xsvm/genesis"
+	"github.com/tenderly/avalanchego/tests"
+	"github.com/tenderly/avalanchego/tests/fixture/e2e"
+	"github.com/tenderly/avalanchego/tests/fixture/tmpnet"
+	"github.com/tenderly/avalanchego/utils/crypto/secp256k1"
+	"github.com/tenderly/avalanchego/utils/units"
+	"github.com/tenderly/avalanchego/vms/example/xsvm"
+	"github.com/tenderly/avalanchego/vms/example/xsvm/api"
+	"github.com/tenderly/avalanchego/vms/example/xsvm/cmd/issue/export"
+	"github.com/tenderly/avalanchego/vms/example/xsvm/cmd/issue/importtx"
+	"github.com/tenderly/avalanchego/vms/example/xsvm/cmd/issue/transfer"
+	"github.com/tenderly/avalanchego/vms/example/xsvm/genesis"
 
 	ginkgo "github.com/onsi/ginkgo/v2"
 )

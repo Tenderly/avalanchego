@@ -4,11 +4,11 @@
 package state
 
 import (
-	"github.com/ava-labs/avalanchego/cache"
-	"github.com/ava-labs/avalanchego/database"
-	"github.com/ava-labs/avalanchego/database/prefixdb"
-	"github.com/ava-labs/avalanchego/database/versiondb"
-	"github.com/ava-labs/avalanchego/ids"
+	"github.com/tenderly/avalanchego/cache"
+	"github.com/tenderly/avalanchego/database"
+	"github.com/tenderly/avalanchego/database/prefixdb"
+	"github.com/tenderly/avalanchego/database/versiondb"
+	"github.com/tenderly/avalanchego/ids"
 )
 
 const cacheSize = 8192 // max cache entries

@@ -13,8 +13,8 @@ import (
 	context "context"
 	reflect "reflect"
 
-	ids "github.com/ava-labs/avalanchego/ids"
-	set "github.com/ava-labs/avalanchego/utils/set"
+	ids "github.com/tenderly/avalanchego/ids"
+	set "github.com/tenderly/avalanchego/utils/set"
 	gomock "go.uber.org/mock/gomock"
 )
 

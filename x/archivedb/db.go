@@ -8,8 +8,8 @@ import (
 	"errors"
 	"io"
 
-	"github.com/ava-labs/avalanchego/api/health"
-	"github.com/ava-labs/avalanchego/database"
+	"github.com/tenderly/avalanchego/api/health"
+	"github.com/tenderly/avalanchego/database"
 )
 
 var (

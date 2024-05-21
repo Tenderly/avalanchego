@@ -11,11 +11,11 @@ import (
 	"github.com/stretchr/testify/require"
 	"go.uber.org/mock/gomock"
 
-	"github.com/ava-labs/avalanchego/ids"
-	"github.com/ava-labs/avalanchego/utils/set"
-	"github.com/ava-labs/avalanchego/vms/avm/block"
-	"github.com/ava-labs/avalanchego/vms/avm/state"
-	"github.com/ava-labs/avalanchego/vms/avm/txs"
+	"github.com/tenderly/avalanchego/ids"
+	"github.com/tenderly/avalanchego/utils/set"
+	"github.com/tenderly/avalanchego/vms/avm/block"
+	"github.com/tenderly/avalanchego/vms/avm/state"
+	"github.com/tenderly/avalanchego/vms/avm/txs"
 )
 
 var (

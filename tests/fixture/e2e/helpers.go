@@ -12,17 +12,17 @@ import (
 	"strings"
 	"time"
 
-	"github.com/ava-labs/coreth/core/types"
-	"github.com/ava-labs/coreth/ethclient"
-	"github.com/ava-labs/coreth/interfaces"
 	"github.com/stretchr/testify/require"
+	"github.com/tenderly/coreth/core/types"
+	"github.com/tenderly/coreth/ethclient"
+	"github.com/tenderly/coreth/interfaces"
 
-	"github.com/ava-labs/avalanchego/ids"
-	"github.com/ava-labs/avalanchego/tests"
-	"github.com/ava-labs/avalanchego/tests/fixture/tmpnet"
-	"github.com/ava-labs/avalanchego/vms/secp256k1fx"
-	"github.com/ava-labs/avalanchego/wallet/subnet/primary"
-	"github.com/ava-labs/avalanchego/wallet/subnet/primary/common"
+	"github.com/tenderly/avalanchego/ids"
+	"github.com/tenderly/avalanchego/tests"
+	"github.com/tenderly/avalanchego/tests/fixture/tmpnet"
+	"github.com/tenderly/avalanchego/vms/secp256k1fx"
+	"github.com/tenderly/avalanchego/wallet/subnet/primary"
+	"github.com/tenderly/avalanchego/wallet/subnet/primary/common"
 
 	ginkgo "github.com/onsi/ginkgo/v2"
 )
@@ -174,7 +174,7 @@ func SuggestGasPrice(ethClient ethclient.Client) *big.Int {
 	require.NoError(ginkgo.GinkgoT(), err)
 	// Double the suggested gas price to maximize the chances of
 	// acceptance. Maybe this can be revisited pending resolution of
-	// https://github.com/ava-labs/coreth/issues/314.
+	// https://github.com/tenderly/coreth/issues/314.
 	gasPrice.Add(gasPrice, gasPrice)
 	return gasPrice
 }

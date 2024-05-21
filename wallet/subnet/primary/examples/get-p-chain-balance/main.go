@@ -8,13 +8,13 @@ import (
 	"log"
 	"time"
 
-	"github.com/ava-labs/avalanchego/utils/constants"
-	"github.com/ava-labs/avalanchego/utils/formatting/address"
-	"github.com/ava-labs/avalanchego/utils/set"
-	"github.com/ava-labs/avalanchego/wallet/chain/p"
-	"github.com/ava-labs/avalanchego/wallet/chain/p/builder"
-	"github.com/ava-labs/avalanchego/wallet/subnet/primary"
-	"github.com/ava-labs/avalanchego/wallet/subnet/primary/common"
+	"github.com/tenderly/avalanchego/utils/constants"
+	"github.com/tenderly/avalanchego/utils/formatting/address"
+	"github.com/tenderly/avalanchego/utils/set"
+	"github.com/tenderly/avalanchego/wallet/chain/p"
+	"github.com/tenderly/avalanchego/wallet/chain/p/builder"
+	"github.com/tenderly/avalanchego/wallet/subnet/primary"
+	"github.com/tenderly/avalanchego/wallet/subnet/primary/common"
 )
 
 func main() {

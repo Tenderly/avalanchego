@@ -14,15 +14,15 @@ import (
 	"google.golang.org/grpc"
 	"google.golang.org/grpc/health"
 
-	"github.com/ava-labs/avalanchego/snow/engine/snowman/block"
-	"github.com/ava-labs/avalanchego/utils"
-	"github.com/ava-labs/avalanchego/version"
-	"github.com/ava-labs/avalanchego/vms/rpcchainvm/grpcutils"
-	"github.com/ava-labs/avalanchego/vms/rpcchainvm/gruntime"
-	"github.com/ava-labs/avalanchego/vms/rpcchainvm/runtime"
+	"github.com/tenderly/avalanchego/snow/engine/snowman/block"
+	"github.com/tenderly/avalanchego/utils"
+	"github.com/tenderly/avalanchego/version"
+	"github.com/tenderly/avalanchego/vms/rpcchainvm/grpcutils"
+	"github.com/tenderly/avalanchego/vms/rpcchainvm/gruntime"
+	"github.com/tenderly/avalanchego/vms/rpcchainvm/runtime"
 
-	vmpb "github.com/ava-labs/avalanchego/proto/pb/vm"
-	runtimepb "github.com/ava-labs/avalanchego/proto/pb/vm/runtime"
+	vmpb "github.com/tenderly/avalanchego/proto/pb/vm"
+	runtimepb "github.com/tenderly/avalanchego/proto/pb/vm/runtime"
 	healthpb "google.golang.org/grpc/health/grpc_health_v1"
 )
 

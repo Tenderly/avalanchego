@@ -7,7 +7,7 @@ import (
 	"encoding/binary"
 	"errors"
 
-	"github.com/ava-labs/avalanchego/utils/wrappers"
+	"github.com/tenderly/avalanchego/utils/wrappers"
 )
 
 var (

@@ -19,10 +19,10 @@ import (
 	"syscall"
 	"time"
 
-	"github.com/ava-labs/avalanchego/api/health"
-	"github.com/ava-labs/avalanchego/config"
-	"github.com/ava-labs/avalanchego/node"
-	"github.com/ava-labs/avalanchego/utils/perms"
+	"github.com/tenderly/avalanchego/api/health"
+	"github.com/tenderly/avalanchego/config"
+	"github.com/tenderly/avalanchego/node"
+	"github.com/tenderly/avalanchego/utils/perms"
 )
 
 const (

@@ -13,17 +13,17 @@ import (
 	"github.com/spf13/pflag"
 	"github.com/spf13/viper"
 
-	"github.com/ava-labs/avalanchego/database/leveldb"
-	"github.com/ava-labs/avalanchego/database/memdb"
-	"github.com/ava-labs/avalanchego/database/pebble"
-	"github.com/ava-labs/avalanchego/genesis"
-	"github.com/ava-labs/avalanchego/snow/consensus/snowball"
-	"github.com/ava-labs/avalanchego/trace"
-	"github.com/ava-labs/avalanchego/utils/compression"
-	"github.com/ava-labs/avalanchego/utils/constants"
-	"github.com/ava-labs/avalanchego/utils/dynamicip"
-	"github.com/ava-labs/avalanchego/utils/ulimit"
-	"github.com/ava-labs/avalanchego/utils/units"
+	"github.com/tenderly/avalanchego/database/leveldb"
+	"github.com/tenderly/avalanchego/database/memdb"
+	"github.com/tenderly/avalanchego/database/pebble"
+	"github.com/tenderly/avalanchego/genesis"
+	"github.com/tenderly/avalanchego/snow/consensus/snowball"
+	"github.com/tenderly/avalanchego/trace"
+	"github.com/tenderly/avalanchego/utils/compression"
+	"github.com/tenderly/avalanchego/utils/constants"
+	"github.com/tenderly/avalanchego/utils/dynamicip"
+	"github.com/tenderly/avalanchego/utils/ulimit"
+	"github.com/tenderly/avalanchego/utils/units"
 )
 
 const (

@@ -10,8 +10,8 @@ import (
 	"github.com/spf13/pflag"
 	"github.com/spf13/viper"
 
-	"github.com/ava-labs/avalanchego/config"
-	"github.com/ava-labs/avalanchego/wallet/subnet/primary"
+	"github.com/tenderly/avalanchego/config"
+	"github.com/tenderly/avalanchego/wallet/subnet/primary"
 )
 
 const (

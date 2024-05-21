@@ -7,9 +7,9 @@ import (
 	"crypto"
 	"sync"
 
-	"github.com/ava-labs/avalanchego/utils/crypto/bls"
-	"github.com/ava-labs/avalanchego/utils/ips"
-	"github.com/ava-labs/avalanchego/utils/timer/mockable"
+	"github.com/tenderly/avalanchego/utils/crypto/bls"
+	"github.com/tenderly/avalanchego/utils/ips"
+	"github.com/tenderly/avalanchego/utils/timer/mockable"
 )
 
 // IPSigner will return a signedIP for the current value of our dynamic IP.

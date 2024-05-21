@@ -10,7 +10,7 @@ import (
 
 	"github.com/stretchr/testify/require"
 
-	safemath "github.com/ava-labs/avalanchego/utils/math"
+	safemath "github.com/tenderly/avalanchego/utils/math"
 )
 
 var (
