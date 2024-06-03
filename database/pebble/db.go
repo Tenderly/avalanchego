@@ -77,7 +77,7 @@ func New(file string, configBytes []byte, log logging.Logger, _ string, _ promet
 		Comparer:                    pebble.DefaultComparer,
 		WALBytesPerSync:             cfg.WALBytesPerSync,
 		MemTableStopWritesThreshold: cfg.MemTableStopWritesThreshold,
-		MemTableSize:                cfg.MemTableSize,
+		MemTableSize:                uint64(cfg.MemTableSize),
 		MaxOpenFiles:                cfg.MaxOpenFiles,
 		MaxConcurrentCompactions:    func() int { return cfg.MaxConcurrentCompactions },
 	}
@@ -193,7 +193,7 @@ func (db *Database) Compact(start []byte, end []byte) error {
 		// keys but pebble treats a nil [limit] as a key before all keys in
 		// Compact. Use the greatest key in the database as the [limit] to get
 		// the desired behavior.
-		it := db.pebbleDB.NewIter(&pebble.IterOptions{})
+		it, _ := db.pebbleDB.NewIter(&pebble.IterOptions{})
 
 		if !it.Last() {
 			// The database is empty.
@@ -238,9 +238,11 @@ func (db *Database) NewIteratorWithStartAndPrefix(start, prefix []byte) database
 		}
 	}
 
+	it, _ := db.pebbleDB.NewIter(keyRange(start, prefix))
+
 	iter := &iter{
 		db:   db,
-		iter: db.pebbleDB.NewIter(keyRange(start, prefix)),
+		iter: it,
 	}
 	db.openIterators.Add(iter)
 	return iter
