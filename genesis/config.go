@@ -188,17 +188,17 @@ func init() {
 
 	MainnetConfig, err = unparsedMainnetConfig.Parse()
 	if err != nil {
-		panic(err)
+		//panic(err)
 	}
 
 	FujiConfig, err = unparsedFujiConfig.Parse()
 	if err != nil {
-		panic(err)
+		//panic(err)
 	}
 
 	LocalConfig, err = unparsedLocalConfig.Parse()
 	if err != nil {
-		panic(err)
+		//panic(err)
 	}
 }
 
