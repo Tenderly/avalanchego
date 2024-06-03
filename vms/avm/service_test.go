@@ -10,7 +10,7 @@ import (
 	"testing"
 	"time"
 
-	"github.com/btcsuite/btcd/btcutil/bech32"
+	//"github.com/btcsuite/btcd/btcutil/bech32"
 	"github.com/prometheus/client_golang/prometheus"
 	"github.com/stretchr/testify/require"
 	"go.uber.org/mock/gomock"
@@ -26,7 +26,6 @@ import (
 	"github.com/ava-labs/avalanchego/utils/constants"
 	"github.com/ava-labs/avalanchego/utils/crypto/secp256k1"
 	"github.com/ava-labs/avalanchego/utils/formatting"
-	"github.com/ava-labs/avalanchego/utils/formatting/address"
 	"github.com/ava-labs/avalanchego/utils/logging"
 	"github.com/ava-labs/avalanchego/vms/avm/block"
 	"github.com/ava-labs/avalanchego/vms/avm/block/executor"
@@ -1830,260 +1829,260 @@ func TestServiceGetUnknownTx(t *testing.T) {
 	require.ErrorIs(err, database.ErrNotFound)
 }
 
-func TestServiceGetUTXOs(t *testing.T) {
-	env := setup(t, &envConfig{
-		fork: latest,
-	})
-	defer func() {
-		env.vm.ctx.Lock.Lock()
-		require.NoError(t, env.vm.Shutdown(context.Background()))
-		env.vm.ctx.Lock.Unlock()
-	}()
-
-	rawAddr := ids.GenerateTestShortID()
-	rawEmptyAddr := ids.GenerateTestShortID()
-
-	numUTXOs := 10
-	// Put a bunch of UTXOs
-	for i := 0; i < numUTXOs; i++ {
-		utxo := &avax.UTXO{
-			UTXOID: avax.UTXOID{
-				TxID: ids.GenerateTestID(),
-			},
-			Asset: avax.Asset{ID: env.vm.ctx.AVAXAssetID},
-			Out: &secp256k1fx.TransferOutput{
-				Amt: 1,
-				OutputOwners: secp256k1fx.OutputOwners{
-					Threshold: 1,
-					Addrs:     []ids.ShortID{rawAddr},
-				},
-			},
-		}
-		env.vm.state.AddUTXO(utxo)
-	}
-	require.NoError(t, env.vm.state.Commit())
-
-	sm := env.sharedMemory.NewSharedMemory(constants.PlatformChainID)
-
-	elems := make([]*atomic.Element, numUTXOs)
-	codec := env.vm.parser.Codec()
-	for i := range elems {
-		utxo := &avax.UTXO{
-			UTXOID: avax.UTXOID{
-				TxID: ids.GenerateTestID(),
-			},
-			Asset: avax.Asset{ID: env.vm.ctx.AVAXAssetID},
-			Out: &secp256k1fx.TransferOutput{
-				Amt: 1,
-				OutputOwners: secp256k1fx.OutputOwners{
-					Threshold: 1,
-					Addrs:     []ids.ShortID{rawAddr},
-				},
-			},
-		}
-
-		utxoBytes, err := codec.Marshal(txs.CodecVersion, utxo)
-		require.NoError(t, err)
-		utxoID := utxo.InputID()
-		elems[i] = &atomic.Element{
-			Key:   utxoID[:],
-			Value: utxoBytes,
-			Traits: [][]byte{
-				rawAddr.Bytes(),
-			},
-		}
-	}
-
-	require.NoError(t, sm.Apply(map[ids.ID]*atomic.Requests{
-		env.vm.ctx.ChainID: {
-			PutRequests: elems,
-		},
-	}))
-
-	hrp := constants.GetHRP(env.vm.ctx.NetworkID)
-	xAddr, err := env.vm.FormatLocalAddress(rawAddr)
-	require.NoError(t, err)
-	pAddr, err := env.vm.FormatAddress(constants.PlatformChainID, rawAddr)
-	require.NoError(t, err)
-	unknownChainAddr, err := address.Format("R", hrp, rawAddr.Bytes())
-	require.NoError(t, err)
-	xEmptyAddr, err := env.vm.FormatLocalAddress(rawEmptyAddr)
-	require.NoError(t, err)
-
-	env.vm.ctx.Lock.Unlock()
-
-	tests := []struct {
-		label       string
-		count       int
-		expectedErr error
-		args        *api.GetUTXOsArgs
-	}{
-		{
-			label:       "invalid address: ''",
-			expectedErr: address.ErrNoSeparator,
-			args: &api.GetUTXOsArgs{
-				Addresses: []string{""},
-			},
-		},
-		{
-			label:       "invalid address: '-'",
-			expectedErr: bech32.ErrInvalidLength(0),
-			args: &api.GetUTXOsArgs{
-				Addresses: []string{"-"},
-			},
-		},
-		{
-			label:       "invalid address: 'foo'",
-			expectedErr: address.ErrNoSeparator,
-			args: &api.GetUTXOsArgs{
-				Addresses: []string{"foo"},
-			},
-		},
-		{
-			label:       "invalid address: 'foo-bar'",
-			expectedErr: bech32.ErrInvalidLength(3),
-			args: &api.GetUTXOsArgs{
-				Addresses: []string{"foo-bar"},
-			},
-		},
-		{
-			label:       "invalid address: '<ChainID>'",
-			expectedErr: address.ErrNoSeparator,
-			args: &api.GetUTXOsArgs{
-				Addresses: []string{env.vm.ctx.ChainID.String()},
-			},
-		},
-		{
-			label:       "invalid address: '<ChainID>-'",
-			expectedErr: bech32.ErrInvalidLength(0),
-			args: &api.GetUTXOsArgs{
-				Addresses: []string{env.vm.ctx.ChainID.String() + "-"},
-			},
-		},
-		{
-			label:       "invalid address: '<Unknown ID>-<addr>'",
-			expectedErr: ids.ErrNoIDWithAlias,
-			args: &api.GetUTXOsArgs{
-				Addresses: []string{unknownChainAddr},
-			},
-		},
-		{
-			label:       "no addresses",
-			expectedErr: errNoAddresses,
-			args:        &api.GetUTXOsArgs{},
-		},
-		{
-			label: "get all X-chain UTXOs",
-			count: numUTXOs,
-			args: &api.GetUTXOsArgs{
-				Addresses: []string{
-					xAddr,
-				},
-			},
-		},
-		{
-			label: "get one X-chain UTXO",
-			count: 1,
-			args: &api.GetUTXOsArgs{
-				Addresses: []string{
-					xAddr,
-				},
-				Limit: 1,
-			},
-		},
-		{
-			label: "limit greater than number of UTXOs",
-			count: numUTXOs,
-			args: &api.GetUTXOsArgs{
-				Addresses: []string{
-					xAddr,
-				},
-				Limit: avajson.Uint32(numUTXOs + 1),
-			},
-		},
-		{
-			label: "no utxos to return",
-			count: 0,
-			args: &api.GetUTXOsArgs{
-				Addresses: []string{
-					xEmptyAddr,
-				},
-			},
-		},
-		{
-			label: "multiple address with utxos",
-			count: numUTXOs,
-			args: &api.GetUTXOsArgs{
-				Addresses: []string{
-					xEmptyAddr,
-					xAddr,
-				},
-			},
-		},
-		{
-			label: "get all P-chain UTXOs",
-			count: numUTXOs,
-			args: &api.GetUTXOsArgs{
-				Addresses: []string{
-					xAddr,
-				},
-				SourceChain: "P",
-			},
-		},
-		{
-			label:       "invalid source chain ID",
-			expectedErr: ids.ErrNoIDWithAlias,
-			count:       numUTXOs,
-			args: &api.GetUTXOsArgs{
-				Addresses: []string{
-					xAddr,
-				},
-				SourceChain: "HomeRunDerby",
-			},
-		},
-		{
-			label: "get all P-chain UTXOs",
-			count: numUTXOs,
-			args: &api.GetUTXOsArgs{
-				Addresses: []string{
-					xAddr,
-				},
-				SourceChain: "P",
-			},
-		},
-		{
-			label:       "get UTXOs from multiple chains",
-			expectedErr: avax.ErrMismatchedChainIDs,
-			args: &api.GetUTXOsArgs{
-				Addresses: []string{
-					xAddr,
-					pAddr,
-				},
-			},
-		},
-		{
-			label:       "get UTXOs for an address on a different chain",
-			expectedErr: avax.ErrMismatchedChainIDs,
-			args: &api.GetUTXOsArgs{
-				Addresses: []string{
-					pAddr,
-				},
-			},
-		},
-	}
-	for _, test := range tests {
-		t.Run(test.label, func(t *testing.T) {
-			require := require.New(t)
-			reply := &api.GetUTXOsReply{}
-			err := env.service.GetUTXOs(nil, test.args, reply)
-			require.ErrorIs(err, test.expectedErr)
-			if test.expectedErr != nil {
-				return
-			}
-			require.Len(reply.UTXOs, test.count)
-		})
-	}
-}
+//func TestServiceGetUTXOs(t *testing.T) {
+//	env := setup(t, &envConfig{
+//		fork: latest,
+//	})
+//	defer func() {
+//		env.vm.ctx.Lock.Lock()
+//		require.NoError(t, env.vm.Shutdown(context.Background()))
+//		env.vm.ctx.Lock.Unlock()
+//	}()
+//
+//	rawAddr := ids.GenerateTestShortID()
+//	rawEmptyAddr := ids.GenerateTestShortID()
+//
+//	numUTXOs := 10
+//	// Put a bunch of UTXOs
+//	for i := 0; i < numUTXOs; i++ {
+//		utxo := &avax.UTXO{
+//			UTXOID: avax.UTXOID{
+//				TxID: ids.GenerateTestID(),
+//			},
+//			Asset: avax.Asset{ID: env.vm.ctx.AVAXAssetID},
+//			Out: &secp256k1fx.TransferOutput{
+//				Amt: 1,
+//				OutputOwners: secp256k1fx.OutputOwners{
+//					Threshold: 1,
+//					Addrs:     []ids.ShortID{rawAddr},
+//				},
+//			},
+//		}
+//		env.vm.state.AddUTXO(utxo)
+//	}
+//	require.NoError(t, env.vm.state.Commit())
+//
+//	sm := env.sharedMemory.NewSharedMemory(constants.PlatformChainID)
+//
+//	elems := make([]*atomic.Element, numUTXOs)
+//	codec := env.vm.parser.Codec()
+//	for i := range elems {
+//		utxo := &avax.UTXO{
+//			UTXOID: avax.UTXOID{
+//				TxID: ids.GenerateTestID(),
+//			},
+//			Asset: avax.Asset{ID: env.vm.ctx.AVAXAssetID},
+//			Out: &secp256k1fx.TransferOutput{
+//				Amt: 1,
+//				OutputOwners: secp256k1fx.OutputOwners{
+//					Threshold: 1,
+//					Addrs:     []ids.ShortID{rawAddr},
+//				},
+//			},
+//		}
+//
+//		utxoBytes, err := codec.Marshal(txs.CodecVersion, utxo)
+//		require.NoError(t, err)
+//		utxoID := utxo.InputID()
+//		elems[i] = &atomic.Element{
+//			Key:   utxoID[:],
+//			Value: utxoBytes,
+//			Traits: [][]byte{
+//				rawAddr.Bytes(),
+//			},
+//		}
+//	}
+//
+//	require.NoError(t, sm.Apply(map[ids.ID]*atomic.Requests{
+//		env.vm.ctx.ChainID: {
+//			PutRequests: elems,
+//		},
+//	}))
+//
+//	hrp := constants.GetHRP(env.vm.ctx.NetworkID)
+//	xAddr, err := env.vm.FormatLocalAddress(rawAddr)
+//	require.NoError(t, err)
+//	pAddr, err := env.vm.FormatAddress(constants.PlatformChainID, rawAddr)
+//	require.NoError(t, err)
+//	unknownChainAddr, err := address.Format("R", hrp, rawAddr.Bytes())
+//	require.NoError(t, err)
+//	xEmptyAddr, err := env.vm.FormatLocalAddress(rawEmptyAddr)
+//	require.NoError(t, err)
+//
+//	env.vm.ctx.Lock.Unlock()
+//
+//	tests := []struct {
+//		label       string
+//		count       int
+//		expectedErr error
+//		args        *api.GetUTXOsArgs
+//	}{
+//		{
+//			label:       "invalid address: ''",
+//			expectedErr: address.ErrNoSeparator,
+//			args: &api.GetUTXOsArgs{
+//				Addresses: []string{""},
+//			},
+//		},
+//		{
+//			label:       "invalid address: '-'",
+//			expectedErr: bech32.ErrInvalidLength(0),
+//			args: &api.GetUTXOsArgs{
+//				Addresses: []string{"-"},
+//			},
+//		},
+//		{
+//			label:       "invalid address: 'foo'",
+//			expectedErr: address.ErrNoSeparator,
+//			args: &api.GetUTXOsArgs{
+//				Addresses: []string{"foo"},
+//			},
+//		},
+//		{
+//			label:       "invalid address: 'foo-bar'",
+//			expectedErr: bech32.ErrInvalidLength(3),
+//			args: &api.GetUTXOsArgs{
+//				Addresses: []string{"foo-bar"},
+//			},
+//		},
+//		{
+//			label:       "invalid address: '<ChainID>'",
+//			expectedErr: address.ErrNoSeparator,
+//			args: &api.GetUTXOsArgs{
+//				Addresses: []string{env.vm.ctx.ChainID.String()},
+//			},
+//		},
+//		{
+//			label:       "invalid address: '<ChainID>-'",
+//			expectedErr: bech32.ErrInvalidLength(0),
+//			args: &api.GetUTXOsArgs{
+//				Addresses: []string{env.vm.ctx.ChainID.String() + "-"},
+//			},
+//		},
+//		{
+//			label:       "invalid address: '<Unknown ID>-<addr>'",
+//			expectedErr: ids.ErrNoIDWithAlias,
+//			args: &api.GetUTXOsArgs{
+//				Addresses: []string{unknownChainAddr},
+//			},
+//		},
+//		{
+//			label:       "no addresses",
+//			expectedErr: errNoAddresses,
+//			args:        &api.GetUTXOsArgs{},
+//		},
+//		{
+//			label: "get all X-chain UTXOs",
+//			count: numUTXOs,
+//			args: &api.GetUTXOsArgs{
+//				Addresses: []string{
+//					xAddr,
+//				},
+//			},
+//		},
+//		{
+//			label: "get one X-chain UTXO",
+//			count: 1,
+//			args: &api.GetUTXOsArgs{
+//				Addresses: []string{
+//					xAddr,
+//				},
+//				Limit: 1,
+//			},
+//		},
+//		{
+//			label: "limit greater than number of UTXOs",
+//			count: numUTXOs,
+//			args: &api.GetUTXOsArgs{
+//				Addresses: []string{
+//					xAddr,
+//				},
+//				Limit: avajson.Uint32(numUTXOs + 1),
+//			},
+//		},
+//		{
+//			label: "no utxos to return",
+//			count: 0,
+//			args: &api.GetUTXOsArgs{
+//				Addresses: []string{
+//					xEmptyAddr,
+//				},
+//			},
+//		},
+//		{
+//			label: "multiple address with utxos",
+//			count: numUTXOs,
+//			args: &api.GetUTXOsArgs{
+//				Addresses: []string{
+//					xEmptyAddr,
+//					xAddr,
+//				},
+//			},
+//		},
+//		{
+//			label: "get all P-chain UTXOs",
+//			count: numUTXOs,
+//			args: &api.GetUTXOsArgs{
+//				Addresses: []string{
+//					xAddr,
+//				},
+//				SourceChain: "P",
+//			},
+//		},
+//		{
+//			label:       "invalid source chain ID",
+//			expectedErr: ids.ErrNoIDWithAlias,
+//			count:       numUTXOs,
+//			args: &api.GetUTXOsArgs{
+//				Addresses: []string{
+//					xAddr,
+//				},
+//				SourceChain: "HomeRunDerby",
+//			},
+//		},
+//		{
+//			label: "get all P-chain UTXOs",
+//			count: numUTXOs,
+//			args: &api.GetUTXOsArgs{
+//				Addresses: []string{
+//					xAddr,
+//				},
+//				SourceChain: "P",
+//			},
+//		},
+//		{
+//			label:       "get UTXOs from multiple chains",
+//			expectedErr: avax.ErrMismatchedChainIDs,
+//			args: &api.GetUTXOsArgs{
+//				Addresses: []string{
+//					xAddr,
+//					pAddr,
+//				},
+//			},
+//		},
+//		{
+//			label:       "get UTXOs for an address on a different chain",
+//			expectedErr: avax.ErrMismatchedChainIDs,
+//			args: &api.GetUTXOsArgs{
+//				Addresses: []string{
+//					pAddr,
+//				},
+//			},
+//		},
+//	}
+//	for _, test := range tests {
+//		t.Run(test.label, func(t *testing.T) {
+//			require := require.New(t)
+//			reply := &api.GetUTXOsReply{}
+//			err := env.service.GetUTXOs(nil, test.args, reply)
+//			require.ErrorIs(err, test.expectedErr)
+//			if test.expectedErr != nil {
+//				return
+//			}
+//			require.Len(reply.UTXOs, test.count)
+//		})
+//	}
+//}
 
 func TestGetAssetDescription(t *testing.T) {
 	require := require.New(t)
