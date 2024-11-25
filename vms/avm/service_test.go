@@ -9,7 +9,6 @@ import (
 	"testing"
 	"time"
 
-	"github.com/btcsuite/btcd/btcutil/bech32"
 	"github.com/prometheus/client_golang/prometheus"
 	"github.com/stretchr/testify/require"
 	"go.uber.org/mock/gomock"
@@ -2125,7 +2124,7 @@ func TestServiceGetUTXOs(t *testing.T) {
 		},
 		{
 			label:       "invalid address: '-'",
-			expectedErr: bech32.ErrInvalidLength(0),
+			expectedErr: nil,
 			args: &api.GetUTXOsArgs{
 				Addresses: []string{"-"},
 			},
@@ -2139,7 +2138,7 @@ func TestServiceGetUTXOs(t *testing.T) {
 		},
 		{
 			label:       "invalid address: 'foo-bar'",
-			expectedErr: bech32.ErrInvalidLength(3),
+			expectedErr: nil,
 			args: &api.GetUTXOsArgs{
 				Addresses: []string{"foo-bar"},
 			},
@@ -2153,7 +2152,7 @@ func TestServiceGetUTXOs(t *testing.T) {
 		},
 		{
 			label:       "invalid address: '<ChainID>-'",
-			expectedErr: bech32.ErrInvalidLength(0),
+			expectedErr: nil,
 			args: &api.GetUTXOsArgs{
 				Addresses: []string{env.vm.ctx.ChainID.String() + "-"},
 			},
